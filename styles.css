@@ -3,12 +3,32 @@
     src: url('fonts/Raleway-Regular.ttf') format('truetype');
 }
 @font-face {
+    font-family: 'Raleway bold';
+    src: url('fonts/Raleway-Bold.ttf') format('truetype');
+}
+@font-face {
     font-family: 'Bitter';
     src: url('fonts/Bitter-Regular.ttf') format('truetype');
 }
 html, body{
     margin: 0;
+    scroll-behavior: smooth;
     font-family: 'Raleway';
+    color: #1D2F38;
+}
+::-webkit-scrollbar {
+    width: 12px; 
+}
+::-webkit-scrollbar-thumb {
+    background-color: #3f3f3f; 
+    border-radius: 5px; 
+}  
+::-webkit-scrollbar-track {
+    background-color: #b8b8b8; 
+}
+h1, h2, h3{
+    font-family: 'Bitter';
+    font-weight: 400;
 }
 button {
     border: none;
@@ -24,29 +44,103 @@ button {
 }
 img{
     max-width: 100%;
-    max-height: auto;
+    height: auto;
+}
+p{
+    margin: 0;
 }
 header{
-    box-sizing: border-box;
-    height: 13vh;    
-    padding: 2.3vh;
+    box-sizing: border-box;   
+    padding: 1.025%;
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 
-    box-shadow: 0px 1px 8px 0px rgba(83, 109, 122, 0.45);
-    border-bottom: 1.5px solid rgba(83, 109, 122, 0.45);
+    box-shadow: 0px 1px 6px 0px rgba(83, 109, 122, 0.29);
+    border-bottom: 2px solid rgba(83, 109, 122, 0.24);
+}
+header p{
+    font-size: 14px;
+    line-height: 20px;
+}
+header button{
+    gap: 6px;
+}
+#sign-up{
+    margin-right: 10.05vw;
+}
+.affiliate-logo{
+    margin: 0.1px 0 0 8.95vw;
+    width: 155px;
+}
+header div{
+    display: flex;
+    gap: 2.05vw;
+}
+header div div{
+    display: flex;
+    gap: 3vw;
 }
 main{
-    margin: 0 10%;
+    margin: 0 10.05%;
     display: flex;
     flex-direction: column;
 }
 .introducing{
-    margin-top: 9.18vh;
+    margin-top: 5.1%;
     background-color: #E3EBF1;
+    border-radius: 10px;
+    padding: 3.48vw 3.8vw 3.43vw 3.48vw;
+
     display: flex;
+    gap: 3.47vw;
+}
+.introducing img {
+    min-width: 34.41vw;
+}
+.introducing p {
+    margin: 4.3% 0 1.77vw  0;
+    color: #333;
+    font-size: 18px;
+    line-height: 24px;
+}
+.introducing .green-p{
+    margin: 1vw 0 1.5% 0;
+    color: #10843F;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    line-height: 25px;
+}
+b{
+    font-family: 'Raleway bold';
+}
+h1{
+    font-size: 47px;
+    line-height: 52px;
+    margin: 0;
+}
+.introducing button{
+    width: 161px;
+    height: 50px;
+    border-radius: 5px;
+    background: #17A550;
+
+    color: #FFF;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 20px;
+}
+h2{
+    font-size: 38px;
+    line-height: 40px;
+}
+h3{
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0;
+}
+.latest{
+    margin-top: 3.75%;
 }
 .blog-greed{
     width: 100%;
@@ -74,13 +168,42 @@ main{
     display: flex;
 }
 .products{
+    margin-top: 3.75%;
+    background: #E3EBF1;
     background-image: url(images/bg-small.svg);
+    border-radius: 10px;
+    padding: 2.08vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products div{
+    display: flex;
+    align-items: center;
+}
+.products img{
+    max-height: 50px;
+}
+.products button{
+    width: 111px;
+    height: 52px;
+    border-radius: 5px;
+    background: #17A550;
+
+    color: #FFF;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 22px;
+}
+.product-reviews{
+    margin-top: 3.75%;
 }
 .reviews{
     display: flex;
     gap: 3.5%;
 }
 .news{
+    margin-top: 3.75%;
     background-image: url(images/bg-big.svg);
     display: flex;
     gap: 3.5%;
@@ -91,6 +214,7 @@ nav, footer{
     padding: 0 10%;
 }
 nav{
+    margin-top: 3.75%;
     display: flex;
     gap: 1.5%;
 }
