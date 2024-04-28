@@ -16,16 +16,6 @@ html, body{
     font-family: 'Raleway';
     color: #1D2F38;
 }
-::-webkit-scrollbar {
-    width: 12px; 
-}
-::-webkit-scrollbar-thumb {
-    background-color: #3f3f3f; 
-    border-radius: 5px; 
-}  
-::-webkit-scrollbar-track {
-    background-color: #b8b8b8; 
-}
 h1, h2, h3{
     font-family: 'Bitter';
     font-weight: 400;
@@ -44,6 +34,7 @@ button {
 }
 img{
     max-width: 100%;
+    max-height: 100%;
     height: auto;
 }
 p{
@@ -67,10 +58,10 @@ header button{
     gap: 6px;
 }
 #sign-up{
-    margin-right: 10.05vw;
+    margin-right: 10.1vw;
 }
 .affiliate-logo{
-    margin: 0.1px 0 0 8.95vw;
+    margin: 0.1px 0 0 9.05vw;
     width: 155px;
 }
 header div{
@@ -96,7 +87,7 @@ main{
     gap: 3.47vw;
 }
 .introducing img {
-    min-width: 34.41vw;
+    min-width: 34.74vw;
 }
 .introducing p {
     margin: 4.3% 0 1.77vw  0;
@@ -105,7 +96,7 @@ main{
     line-height: 24px;
 }
 .introducing .green-p{
-    margin: 1vw 0 1.5% 0;
+    margin: 1vw 0 0.55vw 0;
     color: #10843F;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 18px;
