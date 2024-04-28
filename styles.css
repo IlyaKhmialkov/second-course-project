@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bitter';
+    src: url('fonts/Bitter-Regular.ttf') format('truetype');
+}
+html, body{
+    margin: 0;
+    font-family: 'Raleway';
+}
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img{
+    max-width: 100%;
+    max-height: auto;
+}
+header{
+    box-sizing: border-box;
+    height: 13vh;    
+    padding: 2.3vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    box-shadow: 0px 1px 8px 0px rgba(83, 109, 122, 0.45);
+    border-bottom: 1.5px solid rgba(83, 109, 122, 0.45);
+}
+main{
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+}
+.introducing{
+    margin-top: 9.18vh;
+    background-color: #E3EBF1;
+    display: flex;
+}
+.blog-greed{
+    width: 100%;
+    display: grid;
+    grid-template:
+    "main-info secondary-info1" 33%
+    "main-info secondary-info2" 33%
+    "main-info secondary-info3" 33% / 48% 48%;
+    column-gap: 4%;
+    row-gap: 2%;
+}
+.blog-greed :nth-child(1){
+    grid-area: main-info;
+}
+.blog-greed :nth-child(2){
+    grid-area: secondary-info1;
+}
+.blog-greed :nth-child(3){
+    grid-area: secondary-info2;
+}
+.blog-greed :nth-child(4){
+    grid-area: secondary-info3;
+}
+.blog-greed :nth-child(2), .blog-greed :nth-child(3), .blog-greed :nth-child(4){
+    display: flex;
+}
+.products{
+    background-image: url(images/bg-small.svg);
+}
+.reviews{
+    display: flex;
+    gap: 3.5%;
+}
+.news{
+    background-image: url(images/bg-big.svg);
+    display: flex;
+    gap: 3.5%;
+}
+nav, footer{
+    background-color: #F7F9FA;
+    box-sizing: border-box;
+    padding: 0 10%;
+}
+nav{
+    display: flex;
+    gap: 1.5%;
+}
+nav section{
+    width: 35%;
+}
+nav section div{
+    display: flex;
+}
+nav section:nth-child(2) img{
+    max-width: 10vw;
+}
+footer hr{
+    margin: 0;
+}
+footer div{
+    display: flex;
+}
+footer div div{
+    display: flex;
+}
