@@ -40,6 +40,9 @@ img{
 p{
     margin: 0;
 }
+a{
+    text-decoration: none;
+}
 header{
     box-sizing: border-box;   
     padding: 1.025%;
@@ -90,7 +93,7 @@ main{
     min-width: 34.74vw;
 }
 .introducing p {
-    margin: 4.3% 0 1.77vw  0;
+    margin: 1.5vw 0 1.74vw  0;
     color: #333;
     font-size: 18px;
     line-height: 24px;
@@ -131,7 +134,7 @@ h3{
     margin: 0;
 }
 .latest{
-    margin-top: 3.75%;
+    margin-top: 3.28vw;
 }
 .blog-greed{
     width: 100%;
@@ -139,31 +142,55 @@ h3{
     grid-template:
     "main-info secondary-info1" 33%
     "main-info secondary-info2" 33%
-    "main-info secondary-info3" 33% / 48% 48%;
-    column-gap: 4%;
-    row-gap: 2%;
+    "main-info secondary-info3" 33% / 48.5% 48.5%;
+    column-gap: 3.25%;
+    row-gap: 1.234%;
 }
-.blog-greed :nth-child(1){
+.blog-greed div:nth-child(1){
     grid-area: main-info;
 }
-.blog-greed :nth-child(2){
+.blog-greed div:nth-child(1) h3{
+    margin: 6px 0 12.5px;
+}
+.blog-greed div:nth-child(1) p, .reviews p{
+    font-size: 15px;
+    line-height: 20px;
+}
+.blog-greed div:nth-child(2){
     grid-area: secondary-info1;
 }
-.blog-greed :nth-child(3){
+.blog-greed div:nth-child(3){
     grid-area: secondary-info2;
 }
-.blog-greed :nth-child(4){
+.blog-greed div:nth-child(4){
     grid-area: secondary-info3;
 }
-.blog-greed :nth-child(2), .blog-greed :nth-child(3), .blog-greed :nth-child(4){
+.blog-greed div:nth-child(2), .blog-greed div:nth-child(3), .blog-greed div:nth-child(4){
     display: flex;
+    align-items: center;
+    max-height: 150px;
+}
+.blog-greed div:nth-child(2) img, .blog-greed div:nth-child(3) img, .blog-greed div:nth-child(4) img{
+    width: 245px;
+    margin-right: 14.5px;
+}
+.blog-greed div:nth-child(2) p, .blog-greed div:nth-child(3) p, .blog-greed div:nth-child(4) p{
+    font-size: 18px;
+    line-height: 25px;
+}
+.latest button{
+    margin-top: 5.1vw;
+    gap: 4.2px;
+}
+.latest button p{
+    margin-top: 0.5px;
 }
 .products{
-    margin-top: 3.75%;
+    margin-top: 6.95vw;
     background: #E3EBF1;
     background-image: url(images/bg-small.svg);
     border-radius: 10px;
-    padding: 2.08vw;
+    padding: 2.08vw 2.8vw 2.08vw 2.08vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -174,12 +201,19 @@ h3{
 }
 .products img{
     max-height: 50px;
+    margin-right: 12.3px;
 }
+.products h3{
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 2.05px;
+} 
 .products button{
     width: 111px;
     height: 52px;
     border-radius: 5px;
     background: #17A550;
+    margin-top: 0.5px;
 
     color: #FFF;
     justify-content: center;
@@ -187,18 +221,121 @@ h3{
     line-height: 22px;
 }
 .product-reviews{
-    margin-top: 3.75%;
+    margin-top: 4.6vw;
 }
 .reviews{
+    padding-top: 0.65px;
     display: flex;
     gap: 3.5%;
+}
+.reviews div{
+    position: relative;
+    border-radius: 10px;
+    background: #F7F9FA;
+}
+.reviews div .shadow-box{
+    position: absolute;
+    margin: 15px 0 0 15px;
+
+    border-radius: 3px;
+    background: rgba(29, 47, 56, 0.80);
+}
+.reviews div .shadow-box p{
+    margin: 5px 10.5px;
+    color: #FFF;
+    font-size: 12px;
+    line-height: 20px;
+}
+.reviews div div{
+    margin: 1.4vw 1.75vw 2.8vw;
+}
+.reviews div div p{
+    margin-top: 0.85vw;
+}
+.product-reviews button{
+    margin-top: 2.78vw;
+    gap: 4.2px;
+}
+.product-reviews button p{
+    margin-top: 0.5px;
 }
 .news{
-    margin-top: 3.75%;
+    margin-top: 6.95vw;
+    padding: 3.45vw;
     background-image: url(images/bg-big.svg);
     display: flex;
-    gap: 3.5%;
+    gap: 3.45vw;
 }
+.docks-woman{
+    margin-left: 1px;
+}
+.newsletter-signup{
+    margin: 0.55vw 1px 0 0;
+}
+.newsletter-signup div{
+    display: flex;
+    gap: 10px;
+}
+.newsletter-signup div h3{
+    margin-top: 12.6px;
+}
+.news p{
+    font-size: 18px;
+    line-height: 24px;
+    margin: 2.1vw 0 1.7vw;
+}
+.news form input{
+    border-radius: 5px;
+    border: 1.5px solid #AABCC5;
+    background: #FFF;
+    width: 100%;
+    height: 50px;
+
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin-bottom: 2.18vw;
+
+    color: #536D7A;
+    font-size: 12px;
+    line-height: 20px;
+}
+::placeholder{
+    color: #536D7A;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Raleway';
+}
+.news form button{
+    width: 82px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 2px 3px 0 0;
+    display: inline-block;
+    
+    border-radius: 5px;
+    background: #FFC728;
+
+    color: #000;
+    font-size: 12px;
+    line-height: 20px; 
+}
+.news form a{
+    margin-left: 5.5px;
+    padding-top: 5px;
+    color: #536D7A;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 nav, footer{
     background-color: #F7F9FA;
     box-sizing: border-box;
