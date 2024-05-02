@@ -34,7 +34,6 @@ button {
 }
 img{
     max-width: 100%;
-    max-height: 100%;
     height: auto;
 }
 p{
@@ -71,7 +70,28 @@ header div{
     display: flex;
     gap: 2.05vw;
 }
-header div div{
+#burger-button{
+    background: none;
+    border: none;
+    color: black;
+    padding: 0;
+    margin: 0 50px 0 0;
+    width: 70px;
+    height: 70px;
+    box-shadow: none;
+    display: none;
+}
+#burger-button:focus{
+    outline: none; 
+}
+#burger-button img{
+    width: 70px;
+    transition: transform 2s;
+}
+#burger-button.show img {
+    transform: rotate(-135deg);
+}
+#burger-menu{
     display: flex;
     gap: 3vw;
 }
@@ -260,16 +280,22 @@ h3{
     margin-top: 0.5px;
 }
 .news{
+    border-radius: 10px;
     margin-top: 6.95vw;
     padding: 3.45vw;
     background-image: url(images/bg-big.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     gap: 3.45vw;
 }
 .docks-woman{
+    min-width: 47.56%;
     margin-left: 1px;
 }
 .newsletter-signup{
+    display: flex;
+    flex-direction: column;
     margin: 0.55vw 1px 0 0;
 }
 .newsletter-signup div{
@@ -333,6 +359,7 @@ nav, footer{
 }
 nav{
     padding-top: 4.1vw;
+    padding-bottom: 5.5vw;
     margin-top: 6.95vw;
     display: flex;
     gap: 2.75vw;
@@ -356,24 +383,23 @@ nav section:nth-child(1) p{
     line-height: 20px;
     padding-left: 1px;
 }
-nav section:nth-child(2){
+nav section:nth-child(2) div{
     display: grid;
     grid-template:
-    "header header"
-    "pic-1 text-1"
-    "pic-2 text-2" 
-    "pic-3 text-3" / 39% 61%;
+    "pic-1 text-1" 100px
+    "pic-2 text-2" 100px
+    "pic-3 text-3" 100px/ 39% 61%;
+    row-gap: 20px;   
 }
 nav section:nth-of-type(2) h3{
-    grid-area: header;
     box-sizing: border-box;
     padding: 1px 0 0 1px;
+    margin-bottom: 10.5px;
 }
 nav .img-container{
-    width: 140px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     border-radius: 7px;
-    margin: 11px 0 9px;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -458,9 +484,6 @@ nav hr{
     height: 1.5px;
     background: rgba(83, 109, 122, 0.8);
 }
-footer{
-    margin-top: 4.85vw;
-}
 footer hr{
     margin: 0;
     border: none;
@@ -468,7 +491,7 @@ footer hr{
     background: rgba(83, 109, 122, 0.8);
 }
 footer div{
-    margin: 11px 0 10px;
+    padding: 11px 0 9.3px;
     display: flex;
     justify-content: space-between;
 }
@@ -476,7 +499,109 @@ footer div div{
     display: flex;
     gap: 10px;
 }
-footer p {
+footer a {
+    color: #1D2F38;
     font-size: 12px;
-    line-height: 20px;
+    line-height: 20px; 
+}
+
+
+
+@media (max-width: 1024px) { 
+    header {
+        justify-content: center;
+        gap: 10vw;
+    }
+    header div {
+        justify-content: center;
+        gap: 10vw;
+    }
+    header p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #burger-button{
+        display: block;
+    }
+    #burger-menu{
+        background-color: #FFFFFF;
+
+        width: 50vw;    
+        height: 85vh;
+
+        flex-direction: column;
+        align-items: center;
+
+        position: fixed;
+        top: 17vh;
+        left: -50vw;
+
+        z-index: 10;
+        transition: 2s transform;
+    }
+    #burger-menu button{
+        box-sizing: border-box;
+        padding: 7px;
+        background-color: #E3EBF1;
+        border: 2px solid rgba(23, 165, 80, 0.2);
+        border-radius: 7px;
+        width: 25vw;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
+    #burger-menu.show{
+        transform: translateX(100%);
+    }
+    .burger-shadow{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.0);
+        z-index: 2;
+        display: none;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .products h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .blog-greed{
+        grid-template:
+        "main-info" 25%
+        "secondary-info1" 25%
+        "secondary-info2" 25%
+        "secondary-info3" 25% / 100%;
+    }
+    .blog-greed div:nth-child(1){
+        display: flex;
+        align-items: center;
+        max-height: 150px;
+    }
+    .blog-greed div:nth-child(1) img{
+        width: 245px;
+        height: 150px;
+        margin-right: 14.5px;
+    }
+    .blog-greed div:nth-child(1) h3{
+        font-size: 18px;
+        line-height: 25px;
+        font-family: 'Raleway';
+    }
+    .blog-greed div:nth-child(1) p{
+        display: none;
+    }
+    .latest button {
+        margin-top: 8vw;
+    }
 }

@@ -11,7 +11,10 @@
   <header>    
     <div>
       <img src="images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">
-      <div>
+      <button type="button" id="burger-button" class="hide">
+        <img src="images/cross.svg" alt="cross" id="svg">
+      </button>
+      <div id="burger-menu" class="hide">
         <button type="button" id="pages">
           <p>Pages</p>
         </button>
@@ -31,14 +34,14 @@
           <img src="images/cart.svg" alt="cart">
           <p>Buying Guides</p>
         </button>
-      </div>
-      
+      </div>      
     </div>
     
     <button type="button" id="sign-up">
       <img src="images/mail-color.svg" alt="mail">
       <p>Sign up</p>
     </button>
+    <div class="burger-shadow"></div>
   </header>  
   
   <main>
@@ -164,12 +167,14 @@
     </section>
     <section>
       <h3>Latest Articles</h3> 
-      <div class="img-container"></div>
-      <p>How to Prep Your Lawn in the Spring</p>
-      <div class="img-container"></div>
-      <p>Secrets to Know About Hedge Trimming</p>     
-      <div class="img-container"></div>
-      <p>What to Do With a Dying Tree</p>    
+      <div>
+        <div class="img-container"></div>
+        <p>How to Prep Your Lawn in the Spring</p>
+        <div class="img-container"></div>
+        <p>Secrets to Know About Hedge Trimming</p>     
+        <div class="img-container"></div>
+        <p>What to Do With a Dying Tree</p>   
+      </div> 
     </section>
     <section>
       <h3>Browse</h3>
