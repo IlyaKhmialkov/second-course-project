@@ -504,9 +504,6 @@ footer a {
     font-size: 12px;
     line-height: 20px; 
 }
-
-
-
 @media (max-width: 1024px) { 
     header {
         justify-content: center;
@@ -578,10 +575,11 @@ footer a {
     }
     .blog-greed{
         grid-template:
-        "main-info" 25%
-        "secondary-info1" 25%
-        "secondary-info2" 25%
-        "secondary-info3" 25% / 100%;
+        "main-info" 22.75%
+        "secondary-info1" 22.75%
+        "secondary-info2" 22.75%
+        "secondary-info3" 22.75% / 100%;
+        row-gap: 3%;
     }
     .blog-greed div:nth-child(1){
         display: flex;
@@ -603,5 +601,37 @@ footer a {
     }
     .latest button {
         margin-top: 8vw;
+    }
+}
+@media (max-width: 768px) { 
+    .reviews {
+        flex-wrap: wrap;
+        row-gap: 2vw;
+        column-gap: 6%;
+        justify-content: center;
+    }
+    .reviews img {
+        min-width: 100%;
+        width: 35vw;
+    }
+    .reviews > div {
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
+    .reviews div div:last-child p{
+        display: none;
+    }
+    .product-reviews button{
+        margin-top: 8vw;
+    }
+    nav section:nth-child(2) div.img-container{
+        display: none;
+    }
+    nav section:nth-child(2) div {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    nav section:nth-of-type(2) p {
+        padding: 0 ;
     }
 }
