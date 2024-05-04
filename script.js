@@ -3,6 +3,8 @@ const burgerMenu = document.getElementById('burger-menu');
 const burgerShadow = document.querySelector('.burger-shadow');
 const burgerMenuButtons = document.querySelectorAll('header #burger-menu button');
 
+const themeButton = document.getElementById('theme-button');
+
 function burgerSetup(){
     function closeBurger(){
         burgerButton.className = 'hide';
@@ -31,4 +33,23 @@ function burgerSetup(){
         });
     }
 }
-burgerSetup();
+function darkThemeSetup(){
+    const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const darkmode = new Darkmode({
+        label: '🌞',
+    });
+    darkmode.showWidget();
+
+    if(prefersDarkTheme.matches){
+        themeButton.className = "dark";
+        darkmode.toggle();
+    }
+}
+
+
+function main(){
+    burgerSetup();
+    darkThemeSetup();
+}
+
+main();
