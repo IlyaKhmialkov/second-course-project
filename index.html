@@ -9,38 +9,40 @@
 </head>
 <body>
   <header>    
-    <div>
-      <img src="images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">
-      <button type="button" id="burger-button" class="hide">
-        <img src="images/cross.svg" alt="cross" id="svg">
+    <div class="header-container">
+      <div>
+        <img src="images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">
+        <button type="button" id="burger-button" class="hide">
+          <img src="images/cross.svg" alt="cross" id="svg">
+        </button>
+        <div id="burger-menu" class="hide">
+          <button type="button" id="pages">
+            <p>Pages</p>
+          </button>
+          <button type="button" id="categories">
+            <img src="images/4blocks.svg" alt="4 blocks">
+            <p>Categories</p>
+          </button>
+          <button type="button" id="blog">
+            <img src="images/msg.svg" alt="msg">
+            <p>Blog</p>
+          </button>
+          <button type="button" id="reviews">
+            <img src="images/yes-no.svg" alt="2 circles whith cross and ok">
+            <p>Reviews</p>
+          </button>
+          <button type="button" id="buying-guides">
+            <img src="images/cart.svg" alt="cart">
+            <p>Buying Guides</p>
+          </button>
+        </div>      
+      </div>
+      
+      <button type="button" id="sign-up">
+        <img src="images/mail-color.svg" alt="mail">
+        <p>Sign up</p>
       </button>
-      <div id="burger-menu" class="hide">
-        <button type="button" id="pages">
-          <p>Pages</p>
-        </button>
-        <button type="button" id="categories">
-          <img src="images/4blocks.svg" alt="4 blocks">
-          <p>Categories</p>
-        </button>
-        <button type="button" id="blog">
-          <img src="images/msg.svg" alt="msg">
-          <p>Blog</p>
-        </button>
-        <button type="button" id="reviews">
-          <img src="images/yes-no.svg" alt="2 circles whith cross and ok">
-          <p>Reviews</p>
-        </button>
-        <button type="button" id="buying-guides">
-          <img src="images/cart.svg" alt="cart">
-          <p>Buying Guides</p>
-        </button>
-      </div>      
     </div>
-    
-    <button type="button" id="sign-up">
-      <img src="images/mail-color.svg" alt="mail">
-      <p>Sign up</p>
-    </button>
     <div class="burger-shadow"></div>
   </header>  
   
@@ -153,60 +155,65 @@
     </section>    
   </main>
   <nav>
-    <section>
-      <img src="images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">
-      <div class="social-networks">
-        <img src="images/facebook.svg" alt="facebook logo">
-        <img src="images/twitter.svg" alt="twitter logo">
-        <img src="images/insta.svg" alt="instagram logo">
-      </div>
-      <p>
-        <b>Affiliate</b> is a Webflow template made for entrepreneurs who want a professional 
-        and polished site ready to start and grow their affiliate marketing business in any niche.
-      </p>
-    </section>
-    <section>
-      <h3>Latest Articles</h3> 
-      <div>
-        <div class="img-container"></div>
-        <p>How to Prep Your Lawn in the Spring</p>
-        <div class="img-container"></div>
-        <p>Secrets to Know About Hedge Trimming</p>     
-        <div class="img-container"></div>
-        <p>What to Do With a Dying Tree</p>   
-      </div> 
-    </section>
-    <section>
-      <h3>Browse</h3>
-      <div>
-        <input type="text">
-        <button>Search</button>
-      </div>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Affiliate Disclosure</a></li>
-      </ul>
-      <hr>
-      <p>©2022 Your Brand Name</p>
-    </section>
+    <div class="nav-container">
+      <section>
+        <img src="images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">
+        <div class="social-networks">
+          <img src="images/facebook.svg" alt="facebook logo">
+          <img src="images/twitter.svg" alt="twitter logo">
+          <img src="images/insta.svg" alt="instagram logo">
+        </div>
+        <p>
+          <b>Affiliate</b> is a Webflow template made for entrepreneurs who want a professional 
+          and polished site ready to start and grow their affiliate marketing business in any niche.
+        </p>
+      </section>
+      <section>
+        <h3>Latest Articles</h3> 
+        <div>
+          <div class="img-container"></div>
+          <p>How to Prep Your Lawn in the Spring</p>
+          <div class="img-container"></div>
+          <p>Secrets to Know About Hedge Trimming</p>     
+          <div class="img-container"></div>
+          <p>What to Do With a Dying Tree</p>   
+        </div> 
+      </section>
+      <section>
+        <h3>Browse</h3>
+        <div>
+          <input type="text">
+          <button>Search</button>
+        </div>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Affiliate Disclosure</a></li>
+        </ul>
+        <hr>
+        <p>©2022 Your Brand Name</p>
+      </section>
+    </div>
+    
   </nav>
   <footer>
-    <hr>
-    <div>
+    <div class="footer-container">
+      <hr>
       <div>
-        <p><a href="#">Style Guide</a></p>
-        <p><a href="#">Licenses</a></p>
-        <p><a href="#">Changelog</a></p>
-      </div>
-      <div>
-        <p><a href="#">Powered by Webflow.</a></p>
-        <p><a href="#">Designed by Kevin Barrett</a></p>
-      </div> 
-    </div>       
+        <div>
+          <p><a href="#">Style Guide</a></p>
+          <p><a href="#">Licenses</a></p>
+          <p><a href="#">Changelog</a></p>
+        </div>
+        <div>
+          <p><a href="#">Powered by Webflow.</a></p>
+          <p><a href="#">Designed by Kevin Barrett</a></p>
+        </div> 
+      </div>   
+    </div>    
   </footer>
   <script src="script.js"></script>
 </body>
