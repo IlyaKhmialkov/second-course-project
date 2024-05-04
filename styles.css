@@ -260,10 +260,14 @@ h3{
     background: #F7F9FA;
     z-index: -1;
 }
-.darkmode--activated .reviews div, .darkmode--activated .reviews h3{
+.darkmode--activated .reviews div, .darkmode--activated .reviews h3, .darkmode--activated .reviews p{
     mix-blend-mode: difference;
     background-color: #FFF;
     border-radius: 0;
+}
+.darkmode--activated .reviews p{
+    margin-top: 0;
+    padding-top: 0.85vw;;
 }
 .darkmode--activated .reviews div .shadow-box{
     display: none;
@@ -393,7 +397,7 @@ nav, footer{
 .nav-container .social-networks{
     margin: 6.2px 0 20.3px 1px;
 }
-.darkmode--activated .nav-container .social-networks{
+.darkmode--activated .nav-container .social-networks, .darkmode--activated .products img, .darkmode--activated .header-container div div img {
     filter: invert(100%);
 }
 .nav-container section:nth-child(1) p{
