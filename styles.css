@@ -84,6 +84,9 @@ header{
     box-shadow: none;
     display: none;
 }
+.darkmode--activated #burger-button img, .darkmode--activated .product-reviews > button > img, .darkmode--activated .latest > button > img{
+    filter: invert(100%);
+}
 #burger-button:focus{
     outline: none; 
 }
@@ -255,10 +258,20 @@ h3{
     position: relative;
     border-radius: 10px;
     background: #F7F9FA;
+    z-index: -1;
+}
+.darkmode--activated .reviews div, .darkmode--activated .reviews h3{
+    mix-blend-mode: difference;
+    background-color: #FFF;
+    border-radius: 0;
+}
+.darkmode--activated .reviews div .shadow-box{
+    display: none;
 }
 .reviews div .shadow-box{
     position: absolute;
     margin: 15px 0 0 15px;
+    z-index: 1;
 
     border-radius: 3px;
     background: rgba(29, 47, 56, 0.80);
@@ -380,6 +393,9 @@ nav, footer{
 .nav-container .social-networks{
     margin: 6.2px 0 20.3px 1px;
 }
+.darkmode--activated .nav-container .social-networks{
+    filter: invert(100%);
+}
 .nav-container section:nth-child(1) p{
     max-width: 89%;
     font-size: 16px;
@@ -407,6 +423,9 @@ nav, footer{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+.img-container{
+    isolation: isolate;
 }
 .nav-container section:nth-of-type(2) p{
     padding: 0 0 3px 10px;
@@ -506,6 +525,11 @@ nav, footer{
     color: #1D2F38;
     font-size: 12px;
     line-height: 20px; 
+}
+@media (max-width: 1439px) {
+    main, header{
+        padding: 0 10.5%;
+    }
 }
 @media (max-width: 1024px) { 
     .header-container {
@@ -608,6 +632,9 @@ nav, footer{
     }
 }
 @media (max-width: 768px) { 
+    header{
+        padding: 0;
+    }
     .introducing img, .docks-woman{
         display: none;
     }
@@ -706,6 +733,9 @@ nav, footer{
         font-size: 30px;
         line-height: 38px;
     }
+    body > main > section.products > div > img {
+        display: none;
+    }
 }
 @media (max-width: 375px) { 
     .latest div.blog-greed > div img {
@@ -723,8 +753,12 @@ nav, footer{
     #burger-menu button {
         width: 75vw;
     }
+    .products h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
 }
-@media (min-width: 1450px) {
+@media (min-width: 1445px) {
     .header-container div {
         gap: 29.52px;
     }
