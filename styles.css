@@ -15,6 +15,7 @@ html, body{
     scroll-behavior: smooth;
     font-family: 'Raleway';
     color: #1D2F38;
+    background-color: #FFF;
 }
 h1, h2, h3{
     font-family: 'Bitter';
@@ -83,9 +84,6 @@ header{
     height: 70px;
     box-shadow: none;
     display: none;
-}
-.darkmode--activated #burger-button img, .darkmode--activated .product-reviews > button > img, .darkmode--activated .latest > button > img{
-    filter: invert(100%);
 }
 #burger-button:focus{
     outline: none; 
@@ -258,24 +256,10 @@ h3{
     position: relative;
     border-radius: 10px;
     background: #F7F9FA;
-    z-index: -1;
-}
-.darkmode--activated .reviews div, .darkmode--activated .reviews h3, .darkmode--activated .reviews p{
-    mix-blend-mode: difference;
-    background-color: #FFF;
-    border-radius: 0;
-}
-.darkmode--activated .reviews p{
-    margin-top: 0;
-    padding-top: 0.85vw;;
-}
-.darkmode--activated .reviews div .shadow-box{
-    display: none;
 }
 .reviews div .shadow-box{
     position: absolute;
     margin: 15px 0 0 15px;
-    z-index: 1;
 
     border-radius: 3px;
     background: rgba(29, 47, 56, 0.80);
@@ -396,9 +380,6 @@ nav, footer{
 }
 .nav-container .social-networks{
     margin: 6.2px 0 20.3px 1px;
-}
-.darkmode--activated .nav-container .social-networks, .darkmode--activated .products img, .darkmode--activated .header-container div div img {
-    filter: invert(100%);
 }
 .nav-container section:nth-child(1) p{
     max-width: 89%;
@@ -782,5 +763,50 @@ nav, footer{
     }
     .latest button, .latest, .products, .product-reviews, .product-reviews button, .news, .nav-container {
         margin-top: 100px;
+    }
+}
+body.dark-mode{
+    background-color: #000;
+}
+body.dark-mode header button, 
+body.dark-mode .introducing div,
+body.dark-mode h2,
+body.dark-mode .latest div div h3,
+body.dark-mode .latest div div p,
+body.dark-mode .latest button,
+body.dark-mode .products,
+body.dark-mode .product-reviews button,
+body.dark-mode .reviews div div h3,
+body.dark-mode .reviews div div p:not(:first-child),
+body.dark-mode .news,
+body.dark-mode .news img,
+body.dark-mode nav h3,
+body.dark-mode nav p,
+body.dark-mode nav a,
+body.dark-mode nav > div > section:nth-child(3) > div,
+body.dark-mode nav > div > section:nth-child(1) > div,
+body.dark-mode hr,
+body.dark-mode footer a
+{
+    filter: invert(100%);
+}
+#theme-button{
+    filter: invert(0);
+}
+body.dark-mode .product-reviews div div{
+    background-color: #080605;
+}
+body.dark-mode .introducing{
+    background-color: #1c140e;
+}
+body.dark-mode nav, body.dark-mode footer{
+    background-color: #080605;
+}
+@media (max-width: 1024px) {
+    body.dark-mode #burger-menu {
+        background-color: #000;
+    }
+    body.dark-mode #theme-button{
+        filter: invert(100%);
     }
 }

@@ -28,22 +28,35 @@ function burgerSetup(){
         closeBurger();
     }) 
     for (let i = 0; i < burgerMenuButtons.length; i++) {
-        burgerMenuButtons[i].addEventListener('click', function(event) {
+        burgerMenuButtons[i].addEventListener('click', function() {
             closeBurger();                
         });
     }
 }
 function darkThemeSetup(){
     const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-    const darkmode = new Darkmode({
-        label: '🌞',
-    });
-    darkmode.showWidget();
 
     if(prefersDarkTheme.matches){
-        themeButton.className = "dark";
-        darkmode.toggle();
+        themeButton.classList.add('dark');
+        themeButton.textContent = '🌞';
+        document.body.classList.add('dark-mode');
+    } else{
+        themeButton.classList.add('light');
+        themeButton.textContent = '🌝';
     }
+    themeButton.addEventListener('click', function() {
+        if( themeButton.classList.contains('dark')){
+            themeButton.classList.remove('dark');
+            themeButton.classList.add('light');
+            themeButton.textContent = '🌝';
+            document.body.classList.remove('dark-mode');
+        } else{
+            themeButton.classList.remove('light');
+            themeButton.classList.add('dark');
+            themeButton.textContent = '🌞';
+            document.body.classList.add('dark-mode');
+        }              
+    });    
 }
 
 
