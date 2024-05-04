@@ -239,6 +239,7 @@ h3{
     justify-content: center;
     font-size: 15px;
     line-height: 22px;
+    flex-shrink: 0;
 }
 .product-reviews{
     margin-top: 4.6vw;
@@ -372,7 +373,7 @@ nav section:nth-child(1) div,nav section:nth-child(3) div {
 }
 nav .affiliate-logo{
     padding-left: 1px;
-    width: 12.1vw;
+    width: 175px;
 }
 nav .social-networks{
     margin: 6.2px 0 20.3px 1px;
@@ -586,10 +587,11 @@ footer a {
         align-items: center;
         max-height: 150px;
     }
-    .blog-greed div:nth-child(1) img{
+    .blog-greed > div img{
         width: 245px;
         height: 150px;
         margin-right: 14.5px;
+        flex-shrink: 0;
     }
     .blog-greed div:nth-child(1) h3{
         font-size: 18px;
@@ -604,15 +606,30 @@ footer a {
     }
 }
 @media (max-width: 768px) { 
+    .introducing img, .docks-woman{
+        display: none;
+    }
+    #burger-menu{
+        width: 100vw;    
+        left: -100vw;
+        top: 15vh;
+    }
+    #burger-menu button {
+        width: 50vw;
+    }
+    h1 {
+        margin: 20px 0;
+    }
     .reviews {
         flex-wrap: wrap;
-        row-gap: 2vw;
+        row-gap: 3.5vw;
         column-gap: 6%;
         justify-content: center;
     }
     .reviews img {
         min-width: 100%;
-        width: 35vw;
+        width: 270px;
+        height: 150px;
     }
     .reviews > div {
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
@@ -623,15 +640,85 @@ footer a {
     .product-reviews button{
         margin-top: 8vw;
     }
-    nav section:nth-child(2) div.img-container{
+    .products h3 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+    nav section:nth-child(2){
         display: none;
     }
-    nav section:nth-child(2) div {
-        display: flex;
+    nav {
+        justify-content: center;
         flex-direction: column;
-        gap: 40px;
+        padding-bottom: 0;
     }
-    nav section:nth-of-type(2) p {
-        padding: 0 ;
+    nav section {
+        width: 100%;
+    }
+    #burger-button {
+        margin: 0 15px 0 0;
+    }
+    header, header div {
+        gap: 4.5vw;
+    }    
+    nav .affiliate-logo {
+        width: 150px;
+    }
+    .social-networks {
+        gap: 5vw;
+    }
+    footer hr{
+        display: none;
+    }
+    footer > div {
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) { 
+    .latest div.blog-greed > div img{
+        width: 196px;
+        height: 120px;
+        margin-right: 10px;
+    }
+    .news p {
+        margin: 4vw 0 3.5vw;
+    }
+    .news form input {
+        margin-bottom: 4vw;
+    }
+    #sign-up {
+        margin-right: 4vw;
+        display: block;
+    }
+    header .affiliate-logo{
+        margin-left: 4vw;
+    }
+    header, header div {
+        gap: 3vw;
+    }
+    header .affiliate-logo {
+        width: 120px;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+@media (max-width: 375px) { 
+    .latest div.blog-greed > div img {
+        width: 156px;
+        height: 95px;
+        margin-right: 7.5px;
+    }
+    .latest div.blog-greed div h3 ,.latest div.blog-greed div p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    footer div div:last-child {
+        flex-direction: column;
+    }
+    #burger-menu button {
+        width: 75vw;
     }
 }
