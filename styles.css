@@ -62,9 +62,13 @@ header{
 .header-container p{
     font-size: 14px;
     line-height: 20px;
+    gap: 1.8vw;
 }
 .header-container button{
     gap: 6px;
+}
+#theme-button p{
+    font-size: 20px;
 }
 .header-container .affiliate-logo{
     margin: 0.1px 0 0 0;
@@ -72,7 +76,7 @@ header{
 }
 .header-container div{
     display: flex;
-    gap: 2.05vw;
+    gap: 1.8vw;
 }
 #burger-button{
     background: none;
@@ -97,7 +101,6 @@ header{
 }
 #burger-menu{
     display: flex;
-    gap: 3vw;
 }
 main{
     display: flex;
@@ -246,38 +249,66 @@ h3{
 }
 .product-reviews{
     margin-top: 4.6vw;
-}
-.reviews{
-    padding-top: 0.65px;
     display: flex;
-    gap: 3.5%;
+    flex-direction: column;
 }
-.reviews div{
+.product-reviews div.reviews{
+    box-sizing: border-box;
+    padding-top: 0.65px;
+    align-self: center;
+}
+.review{
     position: relative;
     border-radius: 10px;
     background: #F7F9FA;
 }
-.reviews div .shadow-box{
+.review .shadow-box{
     position: absolute;
     margin: 15px 0 0 15px;
 
     border-radius: 3px;
     background: rgba(29, 47, 56, 0.80);
 }
-.reviews div .shadow-box p{
+.review .shadow-box p{
     margin: 5px 10.5px;
     color: #FFF;
     font-size: 12px;
     line-height: 20px;
 }
-.reviews div div{
+.review div{
     margin: 1.4vw 1.75vw 2.8vw;
 }
-.reviews div div p{
+.review img{
+    width: 100%;
+}
+.review div:not(:first-child){
+    padding: 1.4vw 1.75vw 2.8vw;
+    margin: 0;
+}
+.review div p{
     margin-top: 0.85vw;
 }
+.glide__slide {
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 100%;
+    max-height: 100%;
+}
+.glide__slides {
+    gap: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.glide__track {
+    transition: transform 0.3s ease-in-out;
+}
+.product-reviews h2{
+    margin-bottom: 15.5px;
+}
 .product-reviews button{
-    margin-top: 2.78vw;
+    margin-top: 1.65vw;
     gap: 4.2px;
 }
 .product-reviews button p{
@@ -516,7 +547,15 @@ nav, footer{
         padding: 0 10.5%;
     }
 }
+@media (max-width: 1365px){
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 206px;
+    }
+}
 @media (max-width: 1024px) { 
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 188px;
+    }
     .header-container {
         justify-content: center;
         gap: 10vw;
@@ -616,7 +655,15 @@ nav, footer{
         margin-top: 8vw;
     }
 }
+@media (max-width: 850px){
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 0px;
+    }
+}
 @media (max-width: 768px) { 
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 96px;
+    }
     header{
         padding: 0;
     }
@@ -634,21 +681,7 @@ nav, footer{
     h1 {
         margin: 20px 0;
     }
-    .reviews {
-        flex-wrap: wrap;
-        row-gap: 3.5vw;
-        column-gap: 6%;
-        justify-content: center;
-    }
-    .reviews img {
-        min-width: 100%;
-        width: 270px;
-        height: 150px;
-    }
-    .reviews > div {
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-    }
-    .reviews div div:last-child p{
+    .reviews div div p:not(:first-child){
         display: none;
     }
     .product-reviews button{
@@ -790,8 +823,8 @@ body.dark-mode footer a
 {
     filter: invert(100%);
 }
-#theme-button{
-    filter: invert(0);
+body.dark-mode #theme-button p{
+    filter: invert(100%);
 }
 body.dark-mode .product-reviews div div{
     background-color: #080605;
@@ -805,8 +838,5 @@ body.dark-mode nav, body.dark-mode footer{
 @media (max-width: 1024px) {
     body.dark-mode #burger-menu {
         background-color: #000;
-    }
-    body.dark-mode #theme-button{
-        filter: invert(100%);
     }
 }

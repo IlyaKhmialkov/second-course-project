@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affiliate</title>
-  <link rel="icon" href="images\idk.svg" type="image/x-icon">
+  <link rel="icon" href="images/tools.svg" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="libraries/Glide.js/styles.css">
 </head>
 <body>
   <header>    
@@ -35,7 +36,7 @@
             <img src="images/cart.svg" alt="cart">
             <p>Buying Guides</p>
           </button>
-          <button id="theme-button"></button>
+          <button id="theme-button"><p id="theme-button-p">🌝</p></button>
         </div>      
       </div>
       
@@ -100,38 +101,48 @@
     <section class="product-reviews">
       <h2>Latest Product Reviews</h2>
 
-      <div class="reviews">
-        <div>
-          <div class="shadow-box">
-            <p>Lawns</p>
-          </div>
-          <img src="images/lawnmower.png" alt="lawnmower">
-          <div>
-            <h3>Lawnmower Xtreme</h3>
-            <p>This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
-          </div>         
+      <div class="reviews glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <div class="review">
+                <div class="shadow-box">
+                  <p>Lawns</p>
+                </div>
+                <img src="images/lawnmower.png" alt="lawnmower">
+                <div>
+                  <h3>Lawnmower Xtreme</h3>
+                  <p>This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
+                </div>         
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="review">
+                <div class="shadow-box">
+                  <p>Garden</p>
+                </div>
+                <img src="images/grow-fertilizer.png" alt="lawnmower">
+                <div>
+                  <h3>Ultra Grow Fertilizer</h3>
+                  <p>This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="review">
+                <div class="shadow-box">
+                  <p>Hedges</p>
+                </div>
+                <img src="images/hedge-clippers.png" alt="lawnmower">
+                <div>
+                  <h3>Hedge Clippers</h3>
+                  <p>This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
+                </div>
+              </div>
+            </div>
+            </li>
+          </ul>
         </div>
-        <div>
-          <div class="shadow-box">
-            <p>Garden</p>
-          </div>
-          <img src="images/grow-fertilizer.png" alt="lawnmower">
-          <div>
-            <h3>Ultra Grow Fertilizer</h3>
-            <p>This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
-          </div>
-        </div>
-        <div>
-          <div class="shadow-box">
-            <p>Hedges</p>
-          </div>
-          <img src="images/hedge-clippers.png" alt="lawnmower">
-          <div>
-            <h3>Hedge Clippers</h3>
-            <p>This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
-          </div>
-        </div>
-      </div>
 
       <button type="button">
         <img src="images/play.svg" alt="triangle points right">
@@ -216,6 +227,7 @@
       </div>   
     </div>    
   </footer>
+  <script src="libraries/Glide.js/glide.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
