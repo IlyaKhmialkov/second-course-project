@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../assets/fonts/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Raleway bold';
+    src: url('../assets/fonts/Raleway-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bitter';
+    src: url('../assets/fonts/Bitter-Regular.ttf') format('truetype');
+}
+html, body{
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Raleway';
+    color: #1D2F38;
+    background-color: #FFF;
+    min-height: 100vh;
+}
+h2{
+    font-family: 'Bitter';
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 40px;
+    margin-top: 0;
+}
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+main, .header-container{
+    margin: 0 auto;
+    max-width: 1150px;
+}
+header{
+    box-shadow: 0px 1px 6px 0px rgba(83, 109, 122, 0.29);
+    border-bottom: 2px solid rgba(83, 109, 122, 0.24);
+    margin: 0;
+    box-sizing: border-box;
+    height: 70px;
+}
+.header-container{
+    box-sizing: border-box;   
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+}
+#theme-button p{
+    font-size: 20px;
+    box-shadow: inset 0px 0px 20px 20px #3F3F3F,  0px 0px 7.5px 7.5px #3F3F3F;
+}
+.header-container .affiliate-logo{
+    margin: 0.1px 0 0 0;
+    width: 155px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section{
+    margin-top: 5.1%;
+    background-color: #E3EBF1;
+    border-radius: 25px;
+    padding: 50px;    
+    margin-bottom: 10vh;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+.sign-in form{
+    flex-direction: column;
+}
+form label{
+    display: inline-block;
+    width: 140px;
+}
+form div:not(:nth-child(10)) input{
+    padding: 1px 4px;
+    border-width: 1px;
+    border-radius: 7.5px;
+    height: 20px;
+    width: 225px;
+}
+form div:nth-child(10),form div:last-child {
+    min-width: 100%;
+}
+form div:nth-child(10) input{
+    margin-left: 0;
+}
+.sign-up div:nth-child(10) label{
+    width: 260px;
+}
+form div:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+form button:first-child{
+    width: 161px;
+    height: 50px;
+    border-radius: 5px;
+    background: #17A550;
+
+    color: #FFF;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 20px;
+}
+form button:last-child{
+    border-radius: 5px;
+    background: #89c8a2;
+    padding: 10px 20px;
+
+    color: #000000;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 20px;
+}
+.hidden{
+    display: none;
+}
+
+@media (max-width: 1439px) {
+    main, header{
+        padding: 0 10.5%;
+    }
+}
+@media (min-width: 1445px) {
+    .header-container div {
+        gap: 29.52px;
+    }
+}
+body.dark-mode, body.dark-mode #theme-button-p, body.dark-mode img
+{
+    filter: invert(100%);
+}
