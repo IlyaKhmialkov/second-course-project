@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Raleway';
-    src: url('fonts/Raleway-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/Raleway-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Raleway bold';
-    src: url('fonts/Raleway-Bold.ttf') format('truetype');
+    src: url('../assets/fonts/Raleway-Bold.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Bitter';
-    src: url('fonts/Bitter-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/Bitter-Regular.ttf') format('truetype');
 }
 html, body{
     margin: 0;
@@ -69,6 +69,7 @@ header{
 }
 #theme-button p{
     font-size: 20px;
+    box-shadow: inset 0px 0px 20px 20px #3F3F3F,  0px 0px 7.5px 7.5px #3F3F3F;
 }
 .header-container .affiliate-logo{
     margin: 0.1px 0 0 0;
@@ -214,7 +215,7 @@ h3{
 .products{
     margin-top: 6.95vw;
     background: #E3EBF1;
-    background-image: url(images/bg-small.svg);
+    background-image: url(../assets/images/bg-small.svg);
     border-radius: 10px;
     padding: 2.08vw 2.8vw 2.08vw 2.08vw;
     display: flex;
@@ -318,7 +319,7 @@ h3{
     border-radius: 10px;
     margin-top: 6.95vw;
     padding: 3.45vw;
-    background-image: url(images/bg-big.svg);
+    background-image: url(../assets/images/bg-big.svg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -450,15 +451,15 @@ nav, footer{
     line-height: 18px;
 }
 .nav-container section:nth-of-type(2) .img-container:nth-of-type(1){
-    background-image: url(images/grass.png);
+    background-image: url(../assets/images/grass.png);
     grid-area: pic-1;
 }
 .nav-container section:nth-of-type(2) .img-container:nth-of-type(2){
-    background-image: url(images/road.png);
+    background-image: url(../assets/images/road.png);
     grid-area: pic-2;
 }
 .nav-container section:nth-of-type(2) .img-container:nth-of-type(3){
-    background-image: url(images/tree.png);
+    background-image: url(../assets/images/tree.png);
     grid-area: pic-3;
 }
 .nav-container section:nth-of-type(2) p:nth-of-type(1){
@@ -562,7 +563,9 @@ nav, footer{
     }
     .header-container div {
         justify-content: center;
-        gap: 10vw;
+    }
+    #burger-button{
+        margin-left: 10vw;
     }
     .header-container p{
         font-size: 18px;
@@ -661,6 +664,9 @@ nav, footer{
     }
 }
 @media (max-width: 768px) { 
+    .header-container {
+        gap: 1.8vw;
+    }
     .product-reviews > div > div > ul > li > div > div:last-child{
         min-height: 96px;
     }
