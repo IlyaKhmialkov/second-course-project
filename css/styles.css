@@ -115,6 +115,28 @@ header{
 #sign-up img:hover {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.75));
 }
+#dropdown-menu{    
+    position: absolute;
+    top: 85px;
+    left: 10.5%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #E3EBF1;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+#dropdown-menu a{
+    padding: 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #000;
+}
 main{
     display: flex;
     flex-direction: column;
@@ -717,7 +739,7 @@ nav, footer{
         justify-content: center;
         gap: 10vw;
     }
-    .header-container div {
+    .header-container div:not(#dropdown-menu) {
         justify-content: center;
     }
     #burger-button{
@@ -891,6 +913,11 @@ nav, footer{
         flex-direction: column;
     }
 }
+@media (max-width: 515px) {
+    .footer-container div div:last-child {
+        flex-direction: column;
+    }
+}
 @media (max-width: 500px) { 
     .latest div.blog-greed > div img{
         width: 196px;
@@ -933,9 +960,6 @@ nav, footer{
     .latest div.blog-greed div h3 ,.latest div.blog-greed div p {
         font-size: 15px;
         line-height: 22px;
-    }
-    .footer-container div div:last-child {
-        flex-direction: column;
     }
     #burger-menu button {
         width: 75vw;
@@ -1004,8 +1028,6 @@ body.dark-mode .introducing{
 body.dark-mode nav, body.dark-mode footer{
     background-color: #080605;
 }
-@media (max-width: 1024px) {
-    body.dark-mode #burger-menu {
-        background-color: #000;
-    }
+body.dark-mode #burger-menu {
+    background-color: #000;
 }

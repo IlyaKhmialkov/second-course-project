@@ -12,7 +12,13 @@
   <header>    
     <div class="header-container">
       <div>
-        <img src="../assets/images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">
+        <div id="dropdown-menu">
+          <a href="#latest" data-i18="11">Latest from the Blog</a>
+          <a href="#product-reviews" data-i18="20">Latest Product Reviews</a>
+          <a href="#news" data-i18="31">Newsletter Signup</a>
+          <a href="#nav" data-i18="55">Navigation</a>
+        </div>
+        <img src="../assets/images/affiliate.svg" alt="affiliate logo" class="affiliate-logo" id="dropdown-button">
         <button type="button" id="burger-button" class="hide">
           <img src="../assets/images/cross.svg" alt="cross" id="svg">
         </button>
@@ -64,7 +70,7 @@
       </div>               
     </section>
 
-    <section class="latest">
+    <section class="latest" id="latest">
       <h2 data-i18="11">Latest from the Blog</h2>
       <div class="blog-greed">
         <div>
@@ -99,7 +105,7 @@
       <button type="button" data-i18="19">See the list</button>
     </section>
     
-    <section class="product-reviews">
+    <section class="product-reviews" id="product-reviews">
       <h2 data-i18="20">Latest Product Reviews</h2>
 
       <div class="reviews glide">
@@ -151,7 +157,7 @@
       </button>
     </section>    
 
-    <section class="news"> 
+    <section class="news" id="news"> 
       <img src="../assets/images/documents.svg" alt="woman whith some documents" class="docks-woman">
       <div class="newsletter-signup">
         <div>
@@ -167,7 +173,7 @@
       </div>
     </section>    
   </main>
-  <nav>
+  <nav id="nav">
     <div class="nav-container">
       <section>
         <img src="../assets/images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">
@@ -226,6 +232,7 @@
           <p><a href="tel:+375211010454">+375211010454</a></p>
           <p><a target="_blank" href="https://maps.app.goo.gl/VSWhctaQ6nWjNebi7" data-i18="52">location</a></p>
           <p><a target="_blank" href="https://github.com/IlyaKhmialkov">GitHub</a></p>
+          <p><a href="#" data-i18="54" id="clear-local-storage">Clear LocalStorage</a></p>
         </div> 
       </div>   
     </div>    
