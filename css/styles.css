@@ -10,15 +10,19 @@
     font-family: 'Bitter';
     src: url('../assets/fonts/Bitter-Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'NotoSerifTC';
+    src: url('../assets/fonts/NotoSerifTC-Regular.otf') format('truetype');
+}
 html, body{
     margin: 0;
     scroll-behavior: smooth;
-    font-family: 'Raleway';
+    font-family: 'Raleway' , 'NotoSerifTC';
     color: #1D2F38;
     background-color: #FFF;
 }
 h1, h2, h3{
-    font-family: 'Bitter';
+    font-family: 'Bitter' , 'NotoSerifTC';
     font-weight: 400;
 }
 button {
@@ -51,8 +55,10 @@ header{
     box-shadow: 0px 1px 6px 0px rgba(83, 109, 122, 0.29);
     border-bottom: 2px solid rgba(83, 109, 122, 0.24);
     margin: 0;
+    height: 85px;
 }
 .header-container{
+    height: 100%;
     box-sizing: border-box;   
     padding: 1.025% 1.025% 1.025% 0;
 
@@ -706,10 +712,7 @@ nav, footer{
         min-height: 206px;
     }
 }
-@media (max-width: 1024px) { 
-    .product-reviews > div > div > ul > li > div > div:last-child{
-        min-height: 188px;
-    }
+@media (max-width: 1060px) {
     .header-container {
         justify-content: center;
         gap: 10vw;
@@ -734,13 +737,13 @@ nav, footer{
         background-color: #FFFFFF;
 
         width: 50vw;    
-        height: 85vh;
+        height: calc(100vh - 95px);
 
         flex-direction: column;
         align-items: center;
 
         position: fixed;
-        top: 17vh;
+        top: 95px;
         left: -50vw;
 
         z-index: 10;
@@ -768,6 +771,11 @@ nav, footer{
         z-index: 2;
         display: none;
     }
+}
+@media (max-width: 1024px) { 
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 188px;
+    }    
     h1 {
         font-size: 40px;
         line-height: 48px;
@@ -835,7 +843,6 @@ nav, footer{
     #burger-menu{
         width: 100vw;    
         left: -100vw;
-        top: 15vh;
     }
     #burger-menu button {
         width: 50vw;
@@ -988,7 +995,7 @@ body.dark-mode footer a
 body.dark-mode #theme-button p{
     filter: invert(100%);
 }
-body.dark-mode .product-reviews div div{
+body.dark-mode .product-reviews div div div{
     background-color: #080605;
 }
 body.dark-mode .introducing{
