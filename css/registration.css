@@ -88,7 +88,7 @@ section{
 }
 form{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
@@ -98,7 +98,7 @@ form{
 }
 form label{
     display: inline-block;
-    width: 140px;
+    width: 155px;
 }
 form div:not(:nth-child(10)) input{
     padding: 1px 4px;
@@ -114,7 +114,7 @@ form div:nth-child(10) input{
     margin-left: 0;
 }
 .sign-up div:nth-child(10) label{
-    width: 260px;
+    width: 265px;
 }
 form div:last-child{
     display: flex;
@@ -144,7 +144,37 @@ form button:last-child{
 .hidden{
     display: none;
 }
-
+form div{
+    display: flex;
+    gap: 5px;
+}
+form div input{
+    position: relative;
+}
+#visible-password-button{
+    height: 100%;
+    border-radius: 15px;
+    width: 23.6px;
+    padding: 0 0 2.1px 3.6px;
+    background: #72d69a;
+    margin: 0 10px;
+}
+#generate-password-button, #generate-login-button{
+    padding: 0 5px;
+}
+#generate-login-button{
+    margin-left: 10px;
+}
+span{
+    color: orange;
+    font-size: 20px;
+}
+#sign-up-send.hidden, #sign-in-send.hidden{
+    display: block;
+    background: #6ea484;
+    color: #474747;
+    cursor: default;
+}
 @media (max-width: 1439px) {
     main, header{
         padding: 0 10.5%;
@@ -155,7 +185,223 @@ form button:last-child{
         gap: 29.52px;
     }
 }
-body.dark-mode, body.dark-mode #theme-button-p, body.dark-mode img
+body.dark-mode, 
+body.dark-mode #theme-button-p,
+body.dark-mode img
 {
     filter: invert(100%);
+}
+
+form div{
+    position: relative;
+}
+::after{
+    display: block;
+    color: black;
+    background:#17A550;
+    padding: 2px 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 400px;
+}
+.msg-empty::after{
+    content: "This field must been filled";
+}
+#login-up-label.msg-empty::after{
+    left: 535px;
+}
+.msg-phone::after{
+    content: "Phone number isn't correct";
+}
+.msg-phone-bel::after{
+    content: "Phone number isn't Belarusian number";
+}
+.msg-less16::after{
+    content: "You bust be older than 16";
+}
+.msg-login-exist::after{
+    content: "This login already exists";
+    left: 535px;
+}
+.msg-small-password::after{
+    content: "Password must have at least 8 symbols";
+    left: 610px;
+}
+.msg-big-password::after{
+    content: "Password must be less than 20 symbols";
+    left: 610px;
+}
+.msg-digit-password::after{
+    content: "Password must have digit";
+    left: 610px;
+}
+.msg-letter-password::after{
+    content: "Password must have latin letter";
+    left: 610px;
+}
+.msg-speshal-symbol-password::after{
+    content: "Password must have speshal symbol";
+    left: 610px;
+}
+.msg-match-password::after{
+    content: "Passwords isn't equals";
+}
+@media (max-width: 1000px) {
+    .msg-phone, 
+    .msg-phone-bel, 
+    .msg-empty, 
+    .msg-less16,
+    .msg-login-exist,    
+    .msg-small-password,
+    .msg-big-password, 
+    .msg-digit-password, 
+    .msg-letter-password, 
+    .msg-speshal-symbol-password,
+    .msg-match-password{
+        height: 39px;
+    }
+    ::after,
+    #login-up-label.msg-empty::after,
+    #login-in-label.msg-empty::after,
+    .msg-small-password::after,
+    .msg-login-exist::after,
+    .msg-digit-password::after,
+    .msg-letter-password::after,
+    .msg-speshal-symbol-password::after,
+    .msg-big-password::after{
+        top: 34px;
+        left: 0;
+    }        
+}
+@media (max-width: 880px){
+    form div {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .sign-up form div:last-child, 
+    .sign-up form div:nth-child(10){
+        flex-direction: row;
+    }
+    .sign-in form div:last-child{
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    #generate-login-button{
+        margin-left: 0;
+    }
+    #visible-password-button{
+        margin: 0 auto;
+    }
+    #terms-of-use-label.msg-empty::after {
+        top: 24px
+    }
+    .msg-phone, 
+    .msg-phone-bel, 
+    .msg-empty, 
+    .msg-less16,
+    .msg-login-exist,    
+    .msg-small-password,
+    .msg-big-password, 
+    .msg-digit-password, 
+    .msg-letter-password, 
+    .msg-speshal-symbol-password,
+    .msg-match-password{
+        height: 24px;
+    }
+    ::after,
+    .msg-empty::after,
+    #login-up-label.msg-empty::after,
+    #login-up-label.msg-empty::after,
+    #login-in-label.msg-empty::after,
+    .msg-match-password::after{
+        top: 59px;
+    }       
+    #login-up-label.msg-empty::after, 
+    .msg-login-exist::after
+    {
+        top: 84px
+    }
+    .msg-small-password::after,
+    .msg-big-password::after, 
+    .msg-digit-password::after, 
+    .msg-letter-password::after, 
+    .msg-speshal-symbol-password::after
+    {
+        top: 114px
+    }
+}
+@media (max-width: 628px){
+    form button:first-child {
+        width: 100px;
+    }
+    form div:not(:nth-child(10)) input {
+        height: 25px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    form div:last-child {
+        gap: 30px;
+        justify-content: start;
+    }
+    #generate-login-button {
+        margin: 20px 0 0;
+        width: 100%;
+    }
+    .sign-up div:nth-child(10) label {
+        width: 100%;
+    }
+    .sign-up div:nth-child(10) {
+        justify-content: center;
+    }
+    #visible-password-button {
+        margin: 15px auto;
+    }
+    #sign-up-send, #sign-in-send {
+        width: 100%;
+    }
+    form button:last-child {
+        width: 100%;
+        height: 50px;
+    }
+    #login-up-label.msg-empty::after, .msg-login-exist::after {
+        top: 55px;
+    }
+    .msg-small-password::after, 
+    .msg-big-password::after, 
+    .msg-digit-password::after, 
+    .msg-letter-password::after, 
+    .msg-speshal-symbol-password::after {
+        top: 50px;
+    }
+    #password-in-label.msg-empty::after{
+        top: 59px;
+    }
+    #terms-of-use-label.msg-empty::after{
+        top: 49px;
+    }
+}
+@media (max-width: 507px){
+    form{
+        gap: 60px;
+    }
+    .msg-small-password::after, 
+    .msg-big-password::after, 
+    .msg-digit-password::after, 
+    .msg-letter-password::after, 
+    .msg-speshal-symbol-password::after {
+        top: 169px;
+    }
+    form div:nth-child(10) label{
+        height: 48px;
+    }
+    #terms-of-use-label.msg-empty::after {
+        top:74px;
+    }
+}
+@media (max-width: 380px){
+    #login-up-label.msg-empty::after,
+    .msg-login-exist::after{
+        top: 139px;
+    }
 }
