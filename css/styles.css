@@ -103,6 +103,12 @@ header{
 #burger-menu{
     display: flex;
 }
+#sign-up img{
+    transition: 0.8s filter;
+}
+#sign-up img:hover {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.75));
+}
 main{
     display: flex;
     flex-direction: column;
@@ -150,6 +156,20 @@ h1{
     justify-content: center;
     font-size: 15px;
     line-height: 20px;
+}
+.introducing button:hover{
+    animation: tilt 1.5s infinite;
+}
+@keyframes tilt {
+    0% {
+      transform: skewY(0deg);
+    }
+    50% {
+      transform: skewY(2.5deg);
+    }
+    100% {
+        transform: skewY(0deg);
+    }
 }
 h2{
     font-size: 38px;
@@ -230,6 +250,18 @@ h3{
     max-height: 50px;
     margin-right: 12.3px;
 }
+.products img:hover{
+    animation: pulse 2s infinite;
+    animation-direction: alternate;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+}
 .products h3{
     font-size: 28px;
     line-height: 32px;
@@ -247,6 +279,11 @@ h3{
     font-size: 15px;
     line-height: 22px;
     flex-shrink: 0;
+    transition: color 2s ease-in-out, background 2s ease-in-out;
+}
+.products button:hover{
+    color: #000000;
+    background: #f7a809;
 }
 .product-reviews{
     margin-top: 4.6vw;
@@ -315,6 +352,76 @@ h3{
 .product-reviews button p{
     margin-top: 0.5px;
 }
+.product-reviews button p:hover{
+    animation-name: textShadow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes textShadow {
+    0% {
+        text-shadow: red 0 0;
+    }
+    2.5% {
+        text-shadow: red 1px 0;
+    }
+    10% {
+        text-shadow: red 2px 0;
+    }
+    15% {
+        text-shadow: red 2px 1px;
+    }
+    20% {
+        text-shadow: red 2px 2px;
+    }
+    25% {
+        text-shadow: red 1px 2px;
+    }
+    30% {
+        text-shadow: red 0 2px;
+    }
+    35% {
+        text-shadow: red -1px 2px;
+    }
+    40% {
+        text-shadow: red -2px 2px;
+    }
+    45% {
+        text-shadow: red -2px 1px;
+    }
+    50% {
+        text-shadow: red -2px 0;
+    }
+    55% {
+        text-shadow: red -2px -1px;
+    }
+    60% {
+        text-shadow: red -2px -2px;
+    }
+    65% {
+        text-shadow: red -1px -2px;
+    }
+    70% {
+        text-shadow: red 0 -2px;
+    }
+    75% {
+        text-shadow: red 1px -2px;
+    }
+    80% {
+        text-shadow: red 2px -2px;
+    }
+    85% {
+        text-shadow: red 2px -1px;
+    }
+    90% {
+        text-shadow: red 2px 0;
+    }
+    97.5% {
+        text-shadow: red 1px 0;
+    }
+    100% {
+        text-shadow: red 0 0;
+    }
+}
 .news{
     border-radius: 10px;
     margin-top: 6.95vw;
@@ -381,12 +488,36 @@ h3{
     font-size: 12px;
     line-height: 20px; 
 }
+.news form button:hover{
+    animation: move 2s infinite;
+}
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(5px);
+    }
+    75%{
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 .news form a{
     margin-left: 5.5px;
     padding-top: 5px;
     color: #536D7A;
     font-size: 12px;
     line-height: 20px;
+}
+.news div img{
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+.news div img:hover{
+    opacity: 0.25;
 }
 nav, footer{
     background: #F7F9FA;
@@ -413,6 +544,23 @@ nav, footer{
 .nav-container .social-networks{
     margin: 6.2px 0 20.3px 1px;
 }
+.social-networks img:hover{
+    animation: rotateAnimation 2s infinite linear;
+}
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(8deg);
+    }
+    75% {
+        transform: rotate(-8deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }
 .nav-container section:nth-child(1) p{
     max-width: 89%;
     font-size: 16px;
@@ -504,6 +652,11 @@ nav, footer{
     line-height: 20px;
     font-weight: 900;
     letter-spacing: 0.5px;
+
+    transition: filter 2s;
+}
+.nav-container button:hover{
+    filter: invert(100%);
 }
 .nav-container ul{
     padding: 5.5px 0 0;
@@ -570,6 +723,9 @@ nav, footer{
     .header-container p{
         font-size: 18px;
         line-height: 28px;
+    }
+    #theme-button p {
+        box-shadow: none;
     }
     #burger-button{
         display: block;
