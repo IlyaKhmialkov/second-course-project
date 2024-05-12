@@ -34,6 +34,11 @@ const termsOfUseLabel = document.getElementById('terms-of-use-label');
 
 const changeLanguage = document.getElementById('change-language');
 
+const LogOutButton = document.getElementById('log-out');
+LogOutButton.addEventListener('click', function() {
+    window.location.href = "index.html";
+});
+
 signUpButton.addEventListener('click', function(){
     signIn.classList.add('hidden');
     signUp.classList.remove('hidden');

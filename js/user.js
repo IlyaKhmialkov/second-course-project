@@ -1,3 +1,8 @@
+const LogOutButton = document.getElementById('log-out');
+LogOutButton.addEventListener('click', function() {
+    window.location.href = "index.html";
+});
+
 const clearLocalStorage = document.getElementById('clear-local-storage');
 clearLocalStorage.addEventListener('click', function(event){
     event.preventDefault();
