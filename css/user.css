@@ -1,0 +1,873 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../assets/fonts/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Raleway bold';
+    src: url('../assets/fonts/Raleway-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bitter';
+    src: url('../assets/fonts/Bitter-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NotoSerifTC';
+    src: url('../assets/fonts/NotoSerifTC-Regular.otf') format('truetype');
+}
+html, body{
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Raleway' , 'NotoSerifTC';
+    color: #1D2F38;
+    background-color: #FFF;
+}
+h1, h2, h3{
+    font-family: 'Bitter' , 'NotoSerifTC';
+    font-weight: 400;
+}
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+main, .nav-container, .footer-container, .header-container{
+    margin: 0 auto;
+    max-width: 1150px;
+}
+header{
+    box-shadow: 0px 1px 6px 0px rgba(83, 109, 122, 0.29);
+    border-bottom: 2px solid rgba(83, 109, 122, 0.24);
+    margin: 0;
+    height: 85px;
+}
+.header-container{
+    height: 100%;
+    box-sizing: border-box;   
+    padding: 1.025% 1.025% 1.025% 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+.header-container p{
+    font-size: 14px;
+    line-height: 20px;
+    gap: 1.8vw;
+}
+.header-container button{
+    gap: 6px;
+}
+#theme-button p{
+    font-size: 20px;
+    box-shadow: inset 0px 0px 20px 20px #3F3F3F,  0px 0px 7.5px 7.5px #3F3F3F;
+}
+.header-container .affiliate-logo{
+    margin: 0.1px 0 0 0;
+    width: 155px;
+}
+.header-container div{
+    display: flex;
+    gap: 1.8vw;
+}
+#burger-button{
+    background: none;
+    border: none;
+    color: black;
+    padding: 0;
+    margin: 0 50px 0 0;
+    width: 70px;
+    height: 70px;
+    box-shadow: none;
+    display: none;
+}
+#burger-button:focus{
+    outline: none; 
+}
+#burger-button img{
+    width: 70px;
+    transition: transform 2s;
+}
+#burger-button.show img {
+    transform: rotate(-135deg);
+}
+#burger-menu{
+    display: flex;
+}
+#sign-up img{
+    transition: 0.8s filter;
+}
+#sign-up img:hover {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.75));
+}
+#dropdown-menu{    
+    position: absolute;
+    top: 85px;
+    left: 10.5%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #E3EBF1;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+#dropdown-menu a{
+    padding: 0 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: #000;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+b{
+    font-family: 'Raleway bold';
+}
+h2{
+    font-size: 38px;
+    line-height: 40px;
+}
+h3{
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0;
+}
+.latest{
+    margin-top: 5.1%;
+    background-color: #E3EBF1;
+    border-radius: 10px;
+    padding: 0 3.8vw 3.43vw 3.48vw;
+}
+.blog-greed{
+    width: 100%;
+    display: grid;
+    grid-template:
+    "main-info secondary-info1" 33%
+    "main-info secondary-info2" 33%
+    "main-info secondary-info3" 33% / 48.5% 48.5%;
+    column-gap: 3.25%;
+    row-gap: 1.234%;
+}
+.blog-greed div:nth-child(1){
+    grid-area: main-info;
+}
+.blog-greed div:nth-child(1) h3{
+    margin: 6px 0 12.5px;
+}
+.blog-greed div:nth-child(1) p, .reviews p{
+    font-size: 15px;
+    line-height: 20px;
+}
+.blog-greed div:nth-child(2){
+    grid-area: secondary-info1;
+}
+.blog-greed div:nth-child(3){
+    grid-area: secondary-info2;
+}
+.blog-greed div:nth-child(4){
+    grid-area: secondary-info3;
+}
+.blog-greed div:nth-child(2), .blog-greed div:nth-child(3), .blog-greed div:nth-child(4){
+    display: flex;
+    align-items: center;
+    max-height: 150px;
+}
+.blog-greed div:nth-child(2) img, .blog-greed div:nth-child(3) img, .blog-greed div:nth-child(4) img{
+    width: 245px;
+    margin-right: 14.5px;
+}
+.blog-greed div:nth-child(2) p, .blog-greed div:nth-child(3) p, .blog-greed div:nth-child(4) p{
+    font-size: 18px;
+    line-height: 25px;
+}
+.latest button{
+    margin-top: 5.1vw;
+    gap: 4.2px;
+}
+.latest button p{
+    margin-top: 0.5px;
+}
+.products{
+    margin-top: 6.95vw;
+    background: #E3EBF1;
+    background-image: url(../assets/images/bg-small.svg);
+    border-radius: 10px;
+    padding: 2.08vw 2.8vw 2.08vw 2.08vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products div{
+    display: flex;
+    align-items: center;
+}
+.products img{
+    max-height: 50px;
+    margin-right: 12.3px;
+}
+.products img:hover{
+    animation: pulse 2s infinite;
+    animation-direction: alternate;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+}
+.products h3{
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 2.05px;
+} 
+.products button{
+    width: 111px;
+    height: 52px;
+    border-radius: 5px;
+    background: #17A550;
+    margin-top: 0.5px;
+
+    color: #FFF;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 22px;
+    flex-shrink: 0;
+    transition: color 2s ease-in-out, background 2s ease-in-out;
+}
+.products button:hover{
+    color: #000000;
+    background: #f7a809;
+}
+.product-reviews{
+    margin-top: 4.6vw;
+    display: flex;
+    flex-direction: column;
+}
+.product-reviews div.reviews{
+    box-sizing: border-box;
+    padding-top: 0.65px;
+    align-self: center;
+}
+.review{
+    position: relative;
+    border-radius: 10px;
+    background: #F7F9FA;
+}
+.review .shadow-box{
+    position: absolute;
+    margin: 15px 0 0 15px;
+
+    border-radius: 3px;
+    background: rgba(29, 47, 56, 0.80);
+}
+.review .shadow-box p{
+    margin: 5px 10.5px;
+    color: #FFF;
+    font-size: 12px;
+    line-height: 20px;
+}
+.review div{
+    margin: 1.4vw 1.75vw 2.8vw;
+}
+.review img{
+    width: 100%;
+}
+.review div:not(:first-child){
+    padding: 1.4vw 1.75vw 2.8vw;
+    margin: 0;
+}
+.review div p{
+    margin-top: 0.85vw;
+}
+.glide__slide {
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 100%;
+    max-height: 100%;
+}
+.glide__slides {
+    gap: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.glide__track {
+    transition: transform 0.3s ease-in-out;
+}
+.product-reviews h2{
+    margin-bottom: 15.5px;
+}
+.product-reviews button{
+    margin-top: 1.65vw;
+    gap: 4.2px;
+}
+.product-reviews button p{
+    margin-top: 0.5px;
+}
+.product-reviews button p:hover{
+    animation-name: textShadow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes textShadow {
+    0% {
+        text-shadow: red 0 0;
+    }
+    2.5% {
+        text-shadow: red 1px 0;
+    }
+    10% {
+        text-shadow: red 2px 0;
+    }
+    15% {
+        text-shadow: red 2px 1px;
+    }
+    20% {
+        text-shadow: red 2px 2px;
+    }
+    25% {
+        text-shadow: red 1px 2px;
+    }
+    30% {
+        text-shadow: red 0 2px;
+    }
+    35% {
+        text-shadow: red -1px 2px;
+    }
+    40% {
+        text-shadow: red -2px 2px;
+    }
+    45% {
+        text-shadow: red -2px 1px;
+    }
+    50% {
+        text-shadow: red -2px 0;
+    }
+    55% {
+        text-shadow: red -2px -1px;
+    }
+    60% {
+        text-shadow: red -2px -2px;
+    }
+    65% {
+        text-shadow: red -1px -2px;
+    }
+    70% {
+        text-shadow: red 0 -2px;
+    }
+    75% {
+        text-shadow: red 1px -2px;
+    }
+    80% {
+        text-shadow: red 2px -2px;
+    }
+    85% {
+        text-shadow: red 2px -1px;
+    }
+    90% {
+        text-shadow: red 2px 0;
+    }
+    97.5% {
+        text-shadow: red 1px 0;
+    }
+    100% {
+        text-shadow: red 0 0;
+    }
+}
+nav, footer{
+    background: #F7F9FA;
+    box-sizing: border-box;
+    padding: 0 10%;
+}
+.nav-container{
+    padding-top: 4.1vw;
+    padding-bottom: 5.5vw;
+    margin-top: 6.95vw;
+    display: flex;
+    gap: 2.75vw;
+}
+.nav-container section{
+    width: 35%;
+}
+.nav-container section:nth-child(1) div,.nav-container section:nth-child(3) div {
+    display: flex;
+}
+.nav-container .affiliate-logo{
+    padding-left: 1px;
+    width: 175px;
+}
+.nav-container .social-networks{
+    margin: 6.2px 0 20.3px 1px;
+}
+.social-networks img:hover{
+    animation: rotateAnimation 2s infinite linear;
+}
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(8deg);
+    }
+    75% {
+        transform: rotate(-8deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }
+.nav-container section:nth-child(1) p{
+    max-width: 89%;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 1px;
+}
+.nav-container section:nth-child(2) div{
+    display: grid;
+    grid-template:
+    "pic-1 text-1" 100px
+    "pic-2 text-2" 100px
+    "pic-3 text-3" 100px/ 39% 61%;
+    row-gap: 20px;   
+}
+.nav-container section:nth-of-type(2) h3{
+    box-sizing: border-box;
+    padding: 1px 0 0 1px;
+    margin-bottom: 10.5px;
+}
+.nav-container .img-container{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.img-container{
+    isolation: isolate;
+}
+.nav-container section:nth-of-type(2) p{
+    padding: 0 0 3px 10px;
+    align-self: center;
+    font-size: 16px;
+    line-height: 18px;
+}
+.nav-container section:nth-of-type(2) .img-container:nth-of-type(1){
+    background-image: url(../assets/images/grass.png);
+    grid-area: pic-1;
+}
+.nav-container section:nth-of-type(2) .img-container:nth-of-type(2){
+    background-image: url(../assets/images/road.png);
+    grid-area: pic-2;
+}
+.nav-container section:nth-of-type(2) .img-container:nth-of-type(3){
+    background-image: url(../assets/images/tree.png);
+    grid-area: pic-3;
+}
+.nav-container section:nth-of-type(2) p:nth-of-type(1){
+    grid-area: text-1;
+}
+.nav-container section:nth-of-type(2) p:nth-of-type(2){
+    grid-area: text-2;
+}
+.nav-container section:nth-of-type(2) p:nth-of-type(3){
+    grid-area: text-3;
+}
+.nav-container section:nth-child(3) div {
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: 1px solid #AABCC5;
+    margin-top: 0.8vw;
+    height: 50px;
+}
+.nav-container input{
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+    background: #FFF;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 0 16px;
+
+    color: #536D7A;
+    font-size: 12px;
+    line-height: 20px;
+}
+.nav-container button{
+    border-radius: 0px 5px 5px 0px;
+    background: #768F9C;
+
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+
+    transition: filter 2s;
+}
+.nav-container button:hover{
+    filter: invert(100%);
+}
+.nav-container ul{
+    padding: 5.5px 0 0;
+}
+.nav-container li{
+    list-style: none;
+    font-size: 16px;
+    line-height: 20px; 
+    margin-bottom: 7px;
+}
+.nav-container li a{
+    color: #1D2F38;
+}
+.nav-container hr{
+    margin: 25px 0 20.5px;
+    border: none;
+    height: 1.5px;
+    background: rgba(83, 109, 122, 0.8);
+}
+.footer-container hr{
+    margin: 0;
+    border: none;
+    height: 1.5px;
+    background: rgba(83, 109, 122, 0.8);
+}
+.footer-container div{
+    padding: 11px 0 9.3px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container div div{
+    display: flex;
+    gap: 10px;
+}
+.footer-container a {
+    color: #1D2F38;
+    font-size: 12px;
+    line-height: 20px; 
+}
+@media (max-width: 1439px) {
+    main, header{
+        padding: 0 10.5%;
+    }
+}
+@media (max-width: 1365px){
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 206px;
+    }
+}
+@media (max-width: 1060px) {
+    .header-container {
+        justify-content: center;
+        gap: 10vw;
+    }
+    .header-container div:not(#dropdown-menu) {
+        justify-content: center;
+    }
+    #burger-button{
+        margin-left: 10vw;
+    }
+    .header-container p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #theme-button p {
+        box-shadow: none;
+    }
+    #burger-button{
+        display: block;
+    }
+    #burger-menu{
+        background-color: #FFFFFF;
+
+        width: 50vw;    
+        height: calc(100vh - 95px);
+
+        flex-direction: column;
+        align-items: center;
+
+        position: fixed;
+        top: 95px;
+        left: -50vw;
+
+        z-index: 10;
+        transition: 2s transform;
+    }
+    #burger-menu button{
+        box-sizing: border-box;
+        padding: 7px;
+        background-color: #E3EBF1;
+        border: 2px solid rgba(23, 165, 80, 0.2);
+        border-radius: 7px;
+        width: 25vw;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
+    #burger-menu.show{
+        transform: translateX(100%);
+    }
+    .burger-shadow{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.0);
+        z-index: 2;
+        display: none;
+    }
+}
+@media (max-width: 1024px) { 
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 188px;
+    }    
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .products h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .blog-greed{
+        grid-template:
+        "main-info" 22.75%
+        "secondary-info1" 22.75%
+        "secondary-info2" 22.75%
+        "secondary-info3" 22.75% / 100%;
+        row-gap: 3%;
+    }
+    .blog-greed div:nth-child(1){
+        display: flex;
+        align-items: center;
+        max-height: 150px;
+    }
+    .blog-greed > div img{
+        width: 245px;
+        height: 150px;
+        margin-right: 14.5px;
+        flex-shrink: 0;
+    }
+    .blog-greed div:nth-child(1) h3{
+        font-size: 18px;
+        line-height: 25px;
+        font-family: 'Raleway';
+    }
+    .blog-greed div:nth-child(1) p{
+        display: none;
+    }
+    .latest button {
+        margin-top: 8vw;
+    }
+}
+@media (max-width: 850px){
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 0px;
+    }
+}
+@media (max-width: 768px) { 
+    .header-container {
+        gap: 1.8vw;
+    }
+    .product-reviews > div > div > ul > li > div > div:last-child{
+        min-height: 96px;
+    }
+    header{
+        padding: 0;
+    }    
+    #burger-menu{
+        width: 100vw;    
+        left: -100vw;
+    }
+    #burger-menu button {
+        width: 50vw;
+    }
+    .reviews div div p:not(:first-child){
+        display: none;
+    }
+    .product-reviews button{
+        margin-top: 8vw;
+    }
+    .products h3 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+    .nav-container section:nth-child(2){
+        display: none;
+    }
+    .nav-container {
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    .nav-container section {
+        width: 100%;
+    }
+    #burger-button {
+        margin: 0 15px 0 0;
+    }
+    header, header div {
+        gap: 4.5vw;
+    }    
+    .nav-container .affiliate-logo {
+        width: 150px;
+    }
+    .social-networks {
+        gap: 5vw;
+    }
+    .footer-container hr{
+        display: none;
+    }
+    .footer-container > div {
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
+    .latest div.blog-greed > div img{
+        width: 196px;
+        height: 120px;
+        margin-right: 10px;
+    }
+}
+@media (max-width: 515px) {
+    .footer-container div div:last-child {
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) { 
+    .header-container .affiliate-logo{
+        margin-left: 4vw;
+    }
+    .header-container, .header-container div {
+        gap: 3vw;
+    }
+    .header-container .affiliate-logo {
+        width: 120px;
+    }
+    h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    body > main > section.products > div > img {
+        display: none;
+    }
+}
+@media (max-width: 460px){
+    .latest div.blog-greed > div img {
+        width: 156px;
+        height: 95px;
+        margin-right: 7.5px;
+    }
+    .latest div.blog-greed div h3 ,.latest div.blog-greed div p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 375px) { 
+    #burger-menu button {
+        width: 75vw;
+    }
+    .products h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .latest div.blog-greed > div img {
+        width: 135.6px;
+        height: 82.6px;
+        margin-right: 2.5px;
+    }
+}
+@media (min-width: 1445px) {
+    .header-container div {
+        gap: 29.52px;
+    }
+    .introducing img {
+        width: 500px;
+        max-width: 500px;
+        min-width: 500px;
+        height: 386px;
+        flex-shrink: 0;
+    }
+    .introducing {
+        padding: 50px;
+        gap: 50px;
+    }
+    #burger-menu {
+        gap: 43.2px;
+    }
+    .latest button, .latest, .products, .product-reviews, .product-reviews button, .nav-container {
+        margin-top: 100px;
+    }
+}
+body.dark-mode{
+    background-color: #000;
+}
+body.dark-mode header button, 
+body.dark-mode .introducing div,
+body.dark-mode h2,
+body.dark-mode .latest div div h3,
+body.dark-mode .latest div div p,
+body.dark-mode .latest button,
+body.dark-mode .products,
+body.dark-mode .product-reviews button,
+body.dark-mode .reviews div div h3,
+body.dark-mode .reviews div div p:not(:first-child),
+body.dark-mode .news,
+body.dark-mode .news img,
+body.dark-mode nav h3,
+body.dark-mode nav p,
+body.dark-mode nav a,
+body.dark-mode nav > div > section:nth-child(3) > div,
+body.dark-mode nav > div > section:nth-child(1) > div,
+body.dark-mode hr,
+body.dark-mode footer a
+{
+    filter: invert(100%);
+}
+body.dark-mode #theme-button p{
+    filter: invert(100%);
+}
+body.dark-mode .product-reviews div div div{
+    background-color: #080605;
+}
+body.dark-mode .introducing{
+    background-color: #1c140e;
+}
+body.dark-mode nav, body.dark-mode footer{
+    background-color: #080605;
+}
+body.dark-mode #burger-menu {
+    background-color: #000;
+}

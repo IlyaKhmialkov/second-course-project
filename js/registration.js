@@ -61,7 +61,7 @@ function checkMatches(item, items){
     }
     return false;
 }
-async function setAdminInLocalStorage(){
+async function setDefaultRolesInLocalStorage(){
     let usersData = await getUsersData();
     if(usersData != null || usersData != undefined){
         return;
@@ -69,9 +69,16 @@ async function setAdminInLocalStorage(){
     const admin = {
         role: "admin",
         login: "ilya",
-        password: 1111        
+        password: 1111,
+        name: "ilya"      
     }
-    usersData = [admin];
+    const user = {
+        role: "user",
+        login: "1",
+        password: 1,
+        name: "1"   
+    }
+    usersData = [admin, user];
     const jsonData = JSON.stringify(usersData);
     localStorage.setItem('usersData', jsonData);
 }
@@ -125,7 +132,11 @@ signInForm.addEventListener('submit', async function(event) {
         }
     }   
     if(numberOfUser != -1){
-        alert('Hello, ' + roles[numberOfUser]);
+        if(roles[numberOfUser] === "user"){
+            window.location.href = "user.html";
+        } else{
+            window.location.href = "admin.html";
+        }
         signInForm.reset();
     } else {
         alert('Invalid login or password');
@@ -358,7 +369,7 @@ signUpForm.addEventListener('input', function(){
 });
 async function main(){
     darkThemeSetup();
-    setAdminInLocalStorage();
+    setDefaultRolesInLocalStorage();
     changeLanguageSetup();
 
     changeLanguage.addEventListener('click', async function(){
