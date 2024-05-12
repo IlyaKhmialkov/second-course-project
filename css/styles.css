@@ -933,6 +933,10 @@ nav, footer{
     #sign-up {
         margin-right: 4vw;
         display: block;
+        max-width: 65px;
+    }
+    #sign-up p{
+        line-height: 20px;
     }
     .header-container .affiliate-logo{
         margin-left: 4vw;

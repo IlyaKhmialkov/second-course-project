@@ -109,18 +109,12 @@ header{
 #burger-menu{
     display: flex;
 }
-#sign-up img{
-    transition: 0.8s filter;
-}
-#sign-up img:hover {
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.75));
-}
 #dropdown-menu{    
     position: absolute;
     top: 85px;
     left: 10.5%;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 15px;
 
@@ -771,7 +765,7 @@ nav, footer{
         margin-left: 4vw;
     }
     .header-container, .header-container div {
-        gap: 3vw;
+        gap: 2.9vw;
     }
     .header-container .affiliate-logo {
         width: 120px;
