@@ -21,6 +21,7 @@ export function changeLanguageSetup(){
 
     if(defalutLanguage === 'ja'){
         changeLanguage('ja');
+        document.body.classList.add('ja');
     } else {
         changeLanguage('en');
     }
@@ -29,9 +30,11 @@ export function changeLanguageSetup(){
         if(languageButton.textContent === 'en'){
             changeLanguage('ja');
             localStorage.setItem('language', 'ja');
+            document.body.classList.add('ja');
         } else {
             changeLanguage('en');
             localStorage.setItem('language', 'en');
+            document.body.classList.remove('ja');
         }
     })
 }

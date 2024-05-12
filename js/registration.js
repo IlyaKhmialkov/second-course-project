@@ -1,4 +1,5 @@
 import { darkThemeSetup } from '/js/components/dark-theme.js';
+import { changeLanguageSetup } from '/js/components/changeLanguage.js'
 
 const sendUpFormButton = document.getElementById('sign-up-send');
 const signUpButton = document.getElementById('sign-up-button');
@@ -356,6 +357,7 @@ signUpForm.addEventListener('input', function(){
 async function main(){
     darkThemeSetup();
     setAdminInLocalStorage();
+    changeLanguageSetup();
 }
 
 main();

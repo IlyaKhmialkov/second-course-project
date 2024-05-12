@@ -247,6 +247,42 @@ form div{
 .msg-match-password::after{
     content: "Passwords isn't equals";
 }
+.ja .msg-empty::after{
+    content: "この項目は必須です";
+}
+.ja .msg-phone::after{
+    content: "電話番号が間違っています";
+}
+.ja .msg-phone-bel::after{
+    content: "電話番号はベラルーシの番号ではありません";
+}
+.ja .msg-less16::after{
+    content: "16歳以上である必要があります";
+}
+.ja .msg-login-exist::after{
+    content: "このログインはすでに存在します";
+}
+.ja .msg-small-password::after{
+    content: "パスワードは少なくとも8文字必要です";
+}
+.ja .msg-big-password::after{
+    content: "パスワードは20文字未満である必要があります";
+}
+.ja .msg-digit-password::after{
+    content: "パスワードには数字が必要です";
+}
+.ja .msg-letter-password::after{
+    content: "パスワードにはラテン文字が必要です";
+}
+.ja .msg-speshal-symbol-password::after{
+    content: "パスワードには特殊記号が必要です";
+}
+.ja .msg-match-password::after{
+    content: "パスワードが一致しません";
+}
+#change-language{
+    width: 19px;
+}
 @media (max-width: 1000px) {
     .msg-phone, 
     .msg-phone-bel, 
