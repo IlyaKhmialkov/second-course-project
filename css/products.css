@@ -543,7 +543,7 @@ body.dark-mode footer a
 body.dark-mode #theme-button p{
     filter: invert(100%);
 }
-body.dark-mode .review div:last-child{
+body.dark-mode .review{
     background-color: #080605;
 }
 body.dark-mode .products{

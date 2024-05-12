@@ -147,7 +147,8 @@ h3{
 }
 .articles div h3{
     height: 100%;
-    width: 33%;
+    width: 220px;
+    flex-shrink: 0;
     margin-right: 14.5px;
 }
 .articles div img{
@@ -200,7 +201,7 @@ nav, footer{
     100% {
         transform: rotate(0deg);
     }
-  }
+}
 .nav-container section:nth-child(1) p{
     max-width: 89%;
     font-size: 16px;
@@ -405,43 +406,21 @@ nav, footer{
     h1{
         font-size: 32px;
     }
-    h3{
-        font-size: 26px;
-        line-height: 32px;
-    }
-    .products h3 {
-        font-size: 24px;
-        line-height: 30px;
-    }
-    .articles{
-        grid-template:
-        "main-info" 22.75%
-        "secondary-info1" 22.75%
-        "secondary-info2" 22.75%
-        "secondary-info3" 22.75% / 100%;
-        row-gap: 3%;
-    }
-    .articles div:nth-child(1){
-        display: flex;
-        align-items: center;
-        max-height: 150px;
+    .articles div h3 {
+        font-size: 22px;
+        line-height: 26px;
+        width: 135px;
+        margin-right: 9px;
     }
     .articles > div img{
-        width: 245px;
-        height: 150px;
-        margin-right: 14.5px;
+        width: 213px;
+        height: 130px;
         flex-shrink: 0;
+        margin-right: 9px;
     }
-    .articles div:nth-child(1) h3{
-        font-size: 18px;
-        line-height: 25px;
-        font-family: 'Raleway';
-    }
-    .articles div:nth-child(1) p{
-        display: none;
-    }
-    .blog-articles button {
-        margin-top: 8vw;
+    .articles div p {
+        font-size: 15px;
+        line-height: 18px;
     }
 }
 @media (max-width: 768px) { 
@@ -487,12 +466,20 @@ nav, footer{
     .footer-container > div {
         flex-direction: column;
     }
-}
-@media (max-width: 600px) {
-    .blog-articles div.articles > div img{
-        width: 196px;
-        height: 120px;
-        margin-right: 10px;
+    .articles div{
+        flex-direction: column;
+        max-height: 600px;
+        gap: 20px;
+    }
+    .articles div h3 {
+        height: auto;
+        width: auto;
+        margin: 0;
+    }
+    .articles > div img{
+        margin: 0;
+        width: 70%;
+        height: auto;
     }
 }
 @media (max-width: 515px) {
@@ -514,27 +501,13 @@ nav, footer{
         font-size: 30px;
         line-height: 38px;
     }
-}
-@media (max-width: 460px){
-    .blog-articles div.articles > div img {
-        width: 156px;
-        height: 95px;
-        margin-right: 7.5px;
-    }
-    .blog-articles div.articles div h3,
-    .blog-articles div.articles div p {
-        font-size: 15px;
-        line-height: 22px;
+    .articles > div img{
+        width: 90%;
     }
 }
 @media (max-width: 375px) { 
     #burger-menu button {
         width: 75vw;
-    }
-    .blog-articles div.articles > div img {
-        width: 135.6px;
-        height: 82.6px;
-        margin-right: 2.5px;
     }
 }
 @media (min-width: 1445px) {
