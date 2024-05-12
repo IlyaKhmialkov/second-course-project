@@ -3,6 +3,11 @@ blogArticlesButton.addEventListener('click', function() {
     window.location.href = "blogArticles.html";
 });
 
+const productsButton = document.getElementById('products-button');
+productsButton.addEventListener('click', function() {
+    window.location.href = "products.html";
+});
+
 const LogOutButton = document.getElementById('log-out');
 LogOutButton.addEventListener('click', function() {
     window.location.href = "index.html";

@@ -3,6 +3,11 @@ blogArticlesButton.addEventListener('click', function() {
     alert('you must sign up first');
 });
 
+const productsButton = document.getElementById('products-button');
+productsButton.addEventListener('click', function() {
+    alert('you must sign up first');
+});
+
 const signUpButton = document.getElementById('sign-up');
 signUpButton.addEventListener('click', function() {
     window.location.href = "registration.html";
