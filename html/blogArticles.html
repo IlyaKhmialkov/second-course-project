@@ -5,17 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affiliate</title>
   <link rel="icon" href="../assets/images/tools.svg" type="image/x-icon">
-  <link rel="stylesheet" href="../css/user.css">
-  <link rel="stylesheet" href="../js/libraries/Glide.js/styles.css">
+  <link rel="stylesheet" href="../css/blogArticles.css">
 </head>
 <body>
   <header>    
     <div class="header-container">
       <div>
-        <div id="dropdown-menu">
-          <a href="#product-reviews" data-i18="20">Latest Product Reviews</a>
-          <a href="#nav" data-i18="55">Navigation</a>
-        </div>
         <img src="../assets/images/affiliate.svg" alt="affiliate logo" class="affiliate-logo" id="dropdown-button">
         <button type="button" id="burger-button" class="hide">
           <img src="../assets/images/cross.svg" alt="cross" id="svg">
@@ -44,98 +39,37 @@
           <button id="change-language" data-i18="53">en</button>
         </div>      
       </div>
-      <button type="button" id="log-out" data-i18="73">Log out</button>
+      <button type="button" id="go-back" data-i18="74">Go back</button>
     </div>
     <div class="burger-shadow"></div>
   </header>  
   
   <main>
-    <section class="latest" id="latest">
-      <h2 data-i18="11">Latest from the Blog</h2>
-      <div class="blog-greed">
+    <section class="blog-articles">
+      <h1 data-i18="75">Blog Articles</h1>
+      <div class="articles">
         <div>
-          <img src="../assets/images/grass.png" alt="grass and house">
           <h3 data-i18="12">How to Prep Your Lawn in the Spring</h3>
+          <img src="../assets/images/grass.png" alt="grass and house">
           <p data-i18="13">This is the blog description text. This is the blog description text. This is the blog description text.</p>
         </div>
         <div>
+          <h3 data-i18="14">Secrets to Know About Hedge Trimming</h3>     
           <img src="../assets/images/road.png" alt="road and bush">
-          <p data-i18="14">Secrets to Know About Hedge Trimming</p>     
+          <p data-i18="13">This is the blog description text. This is the blog description text. This is the blog description text.</p>
         </div>
         <div>
+          <h3 data-i18="15">What to Do With a Dying Tree</h3>
           <img src="../assets/images/tree.png" alt="grass and house">
-          <p data-i18="15">What to Do With a Dying Tree</p>
+          <p data-i18="13">This is the blog description text. This is the blog description text. This is the blog description text.</p>
         </div>
         <div>
+          <h3 data-i18="16">Which Flowers Should You Plant Garden</h3>
           <img src="../assets/images/flowers.png" alt="grass and house">
-          <p data-i18="16">Which Flowers Should You Plant Garden</p>
+          <p data-i18="13">This is the blog description text. This is the blog description text. This is the blog description text.</p>
         </div>
       </div>
-      <button type="button" id="blog-articles">
-        <img src="../assets/images/play.svg" alt="triangle points right">
-        <p data-i18="17">View All Blog Articles</p>
-      </button>
-    </section>
-
-    <section class="products">  
-      <div>
-        <img src="../assets/images/tools.svg" alt="tools">
-        <h3 data-i18="18">View our list of the best products in lawncare.</h3>    
-      </div>
-      <button type="button" data-i18="19">See the list</button>
-    </section>
-    
-    <section class="product-reviews" id="product-reviews">
-      <h2 data-i18="20">Latest Product Reviews</h2>
-
-      <div class="reviews glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <div class="review">
-                <div class="shadow-box">
-                  <p data-i18="21">Lawns</p>
-                </div>
-                <img src="../assets/images/lawnmower.png" alt="lawnmower">
-                <div>
-                  <h3 data-i18="22">Lawnmower Xtreme</h3>
-                  <p data-i18="23">This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
-                </div>         
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="review">
-                <div class="shadow-box">
-                  <p data-i18="24">Garden</p>
-                </div>
-                <img src="../assets/images/grow-fertilizer.png" alt="lawnmower">
-                <div>
-                  <h3 data-i18="25">Ultra Grow Fertilizer</h3>
-                  <p data-i18="26">This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
-                </div>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="review">
-                <div class="shadow-box">
-                  <p data-i18="27">Hedges</p>
-                </div>
-                <img src="../assets/images/hedge-clippers.png" alt="lawnmower">
-                <div>
-                  <h3 data-i18="28">Hedge Clippers</h3>
-                  <p data-i18="29">This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
-                </div>
-              </div>
-            </div>
-            </li>
-          </ul>
-        </div>
-
-      <button type="button">
-        <img src="../assets/images/play.svg" alt="triangle points right">
-        <p data-i18="30">View all Product Reviews</p>
-      </button>
-    </section>       
+    </section>      
   </main>
   <nav id="nav">
     <div class="nav-container">
@@ -201,7 +135,6 @@
       </div>   
     </div>    
   </footer>
-  <script src="../js/libraries/Glide.js/glide.js"></script>
-  <script src="../js/user.js" type="module"></script>
+  <script src="../js/blogArticles.js" type="module"></script>
 </body>
 </html>

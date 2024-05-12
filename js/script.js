@@ -1,3 +1,7 @@
+const blogArticlesButton = document.getElementById('blog-articles');
+blogArticlesButton.addEventListener('click', function() {
+    alert('you must sign up first');
+});
 
 const signUpButton = document.getElementById('sign-up');
 signUpButton.addEventListener('click', function() {

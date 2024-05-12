@@ -1,11 +1,6 @@
-const blogArticlesButton = document.getElementById('blog-articles');
-blogArticlesButton.addEventListener('click', function() {
-    window.location.href = "blogArticles.html";
-});
-
-const LogOutButton = document.getElementById('log-out');
-LogOutButton.addEventListener('click', function() {
-    window.location.href = "index.html";
+const goBackButton = document.getElementById('go-back');
+goBackButton.addEventListener('click', function() {
+    window.location.href = "user.html";
 });
 
 const clearLocalStorage = document.getElementById('clear-local-storage');
@@ -14,18 +9,14 @@ clearLocalStorage.addEventListener('click', function(event){
     localStorage.clear(); 
 })
 
-import { sliderSetup } from '/js/components/slider.js';
 import { burgerSetup } from '/js/components/burger-menu.js';
 import { darkThemeSetup } from '/js/components/dark-theme.js';
 import { changeLanguageSetup } from '/js/components/changeLanguage.js';
-import { dropdownSetup } from '/js/components/dropdown.js';
 
 async function main(){
     burgerSetup();
     darkThemeSetup();
-    await sliderSetup();
     changeLanguageSetup();
-    dropdownSetup();
 }
 
 main();

@@ -34,8 +34,8 @@ const termsOfUseLabel = document.getElementById('terms-of-use-label');
 
 const changeLanguage = document.getElementById('change-language');
 
-const LogOutButton = document.getElementById('log-out');
-LogOutButton.addEventListener('click', function() {
+const goBackButton = document.getElementById('go-back');
+goBackButton.addEventListener('click', function() {
     window.location.href = "index.html";
 });
 

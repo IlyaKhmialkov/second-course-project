@@ -21,7 +21,7 @@ html, body{
     color: #1D2F38;
     background-color: #FFF;
 }
-h1, h2, h3{
+h1, h3{
     font-family: 'Bitter' , 'NotoSerifTC';
     font-weight: 400;
 }
@@ -109,28 +109,6 @@ header{
 #burger-menu{
     display: flex;
 }
-#dropdown-menu{    
-    position: absolute;
-    top: 85px;
-    left: 10.5%;
-
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-
-    box-sizing: border-box;
-    padding: 15px;
-    background-color: #E3EBF1;
-    border-radius: 15px;
-    border: 1px solid black;
-}
-#dropdown-menu a{
-    padding: 0 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #FFF;
-    color: #000;
-}
 main{
     display: flex;
     flex-direction: column;
@@ -138,259 +116,48 @@ main{
 b{
     font-family: 'Raleway bold';
 }
-h2{
+h1{
     font-size: 38px;
     line-height: 40px;
 }
 h3{
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 25px;
+    line-height: 30px;
     margin: 0;
 }
-.latest{
+.blog-articles{
     margin-top: 5.1%;
     background-color: #E3EBF1;
     border-radius: 10px;
     padding: 0 3.8vw 3.43vw 3.48vw;
 }
-.blog-greed{
+.articles{
     width: 100%;
-    display: grid;
-    grid-template:
-    "main-info secondary-info1" 33%
-    "main-info secondary-info2" 33%
-    "main-info secondary-info3" 33% / 48.5% 48.5%;
-    column-gap: 3.25%;
-    row-gap: 1.234%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.blog-greed div:nth-child(1){
-    grid-area: main-info;
-}
-.blog-greed div:nth-child(1) h3{
-    margin: 6px 0 12.5px;
-}
-.blog-greed div:nth-child(1) p, .reviews p{
-    font-size: 15px;
-    line-height: 20px;
-}
-.blog-greed div:nth-child(2){
-    grid-area: secondary-info1;
-}
-.blog-greed div:nth-child(3){
-    grid-area: secondary-info2;
-}
-.blog-greed div:nth-child(4){
-    grid-area: secondary-info3;
-}
-.blog-greed div:nth-child(2), .blog-greed div:nth-child(3), .blog-greed div:nth-child(4){
+.articles div{
     display: flex;
     align-items: center;
+    justify-content: center;
     max-height: 150px;
+    border: 2px solid black;
+    padding: 15px;
 }
-.blog-greed div:nth-child(2) img, .blog-greed div:nth-child(3) img, .blog-greed div:nth-child(4) img{
+.articles div h3{
+    height: 100%;
+    width: 33%;
+    margin-right: 14.5px;
+}
+.articles div img{
+    height: 100%;
     width: 245px;
     margin-right: 14.5px;
 }
-.blog-greed div:nth-child(2) p, .blog-greed div:nth-child(3) p, .blog-greed div:nth-child(4) p{
+.articles div p{
     font-size: 18px;
     line-height: 25px;
-}
-.latest button{
-    margin-top: 5.1vw;
-    gap: 4.2px;
-}
-.latest button p{
-    margin-top: 0.5px;
-}
-.products{
-    margin-top: 6.95vw;
-    background: #E3EBF1;
-    background-image: url(../assets/images/bg-small.svg);
-    border-radius: 10px;
-    padding: 2.08vw 2.8vw 2.08vw 2.08vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.products div{
-    display: flex;
-    align-items: center;
-}
-.products img{
-    max-height: 50px;
-    margin-right: 12.3px;
-}
-.products img:hover{
-    animation: pulse 2s infinite;
-    animation-direction: alternate;
-}
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.15);
-    }
-}
-.products h3{
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 2.05px;
-} 
-.products button{
-    width: 111px;
-    height: 52px;
-    border-radius: 5px;
-    background: #17A550;
-    margin-top: 0.5px;
-
-    color: #FFF;
-    justify-content: center;
-    font-size: 15px;
-    line-height: 22px;
-    flex-shrink: 0;
-    transition: color 2s ease-in-out, background 2s ease-in-out;
-}
-.products button:hover{
-    color: #000000;
-    background: #f7a809;
-}
-.product-reviews{
-    margin-top: 4.6vw;
-    display: flex;
-    flex-direction: column;
-}
-.product-reviews div.reviews{
-    box-sizing: border-box;
-    padding-top: 0.65px;
-    align-self: center;
-}
-.review{
-    position: relative;
-    border-radius: 10px;
-    background: #F7F9FA;
-}
-.review .shadow-box{
-    position: absolute;
-    margin: 15px 0 0 15px;
-
-    border-radius: 3px;
-    background: rgba(29, 47, 56, 0.80);
-}
-.review .shadow-box p{
-    margin: 5px 10.5px;
-    color: #FFF;
-    font-size: 12px;
-    line-height: 20px;
-}
-.review div{
-    margin: 1.4vw 1.75vw 2.8vw;
-}
-.review img{
-    width: 100%;
-}
-.review div:not(:first-child){
-    padding: 1.4vw 1.75vw 2.8vw;
-    margin: 0;
-}
-.review div p{
-    margin-top: 0.85vw;
-}
-.glide__slide {
-    padding: 10px;
-    border-radius: 4px;
-    text-align: center;
-    box-sizing: border-box;
-    min-height: 100%;
-    max-height: 100%;
-}
-.glide__slides {
-    gap: 0px;
-    display: flex;
-    flex-wrap: nowrap;
-}
-.glide__track {
-    transition: transform 0.3s ease-in-out;
-}
-.product-reviews h2{
-    margin-bottom: 15.5px;
-}
-.product-reviews button{
-    margin-top: 1.65vw;
-    gap: 4.2px;
-}
-.product-reviews button p{
-    margin-top: 0.5px;
-}
-.product-reviews button p:hover{
-    animation-name: textShadow;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-@keyframes textShadow {
-    0% {
-        text-shadow: red 0 0;
-    }
-    2.5% {
-        text-shadow: red 1px 0;
-    }
-    10% {
-        text-shadow: red 2px 0;
-    }
-    15% {
-        text-shadow: red 2px 1px;
-    }
-    20% {
-        text-shadow: red 2px 2px;
-    }
-    25% {
-        text-shadow: red 1px 2px;
-    }
-    30% {
-        text-shadow: red 0 2px;
-    }
-    35% {
-        text-shadow: red -1px 2px;
-    }
-    40% {
-        text-shadow: red -2px 2px;
-    }
-    45% {
-        text-shadow: red -2px 1px;
-    }
-    50% {
-        text-shadow: red -2px 0;
-    }
-    55% {
-        text-shadow: red -2px -1px;
-    }
-    60% {
-        text-shadow: red -2px -2px;
-    }
-    65% {
-        text-shadow: red -1px -2px;
-    }
-    70% {
-        text-shadow: red 0 -2px;
-    }
-    75% {
-        text-shadow: red 1px -2px;
-    }
-    80% {
-        text-shadow: red 2px -2px;
-    }
-    85% {
-        text-shadow: red 2px -1px;
-    }
-    90% {
-        text-shadow: red 2px 0;
-    }
-    97.5% {
-        text-shadow: red 1px 0;
-    }
-    100% {
-        text-shadow: red 0 0;
-    }
 }
 nav, footer{
     background: #F7F9FA;
@@ -574,11 +341,6 @@ nav, footer{
         padding: 0 10.5%;
     }
 }
-@media (max-width: 1365px){
-    .product-reviews > div > div > ul > li > div > div:last-child{
-        min-height: 206px;
-    }
-}
 @media (max-width: 1060px) {
     .header-container {
         justify-content: center;
@@ -639,11 +401,8 @@ nav, footer{
         display: none;
     }
 }
-@media (max-width: 1024px) { 
-    .product-reviews > div > div > ul > li > div > div:last-child{
-        min-height: 188px;
-    }    
-    h2{
+@media (max-width: 1024px) {      
+    h1{
         font-size: 32px;
     }
     h3{
@@ -654,7 +413,7 @@ nav, footer{
         font-size: 24px;
         line-height: 30px;
     }
-    .blog-greed{
+    .articles{
         grid-template:
         "main-info" 22.75%
         "secondary-info1" 22.75%
@@ -662,40 +421,32 @@ nav, footer{
         "secondary-info3" 22.75% / 100%;
         row-gap: 3%;
     }
-    .blog-greed div:nth-child(1){
+    .articles div:nth-child(1){
         display: flex;
         align-items: center;
         max-height: 150px;
     }
-    .blog-greed > div img{
+    .articles > div img{
         width: 245px;
         height: 150px;
         margin-right: 14.5px;
         flex-shrink: 0;
     }
-    .blog-greed div:nth-child(1) h3{
+    .articles div:nth-child(1) h3{
         font-size: 18px;
         line-height: 25px;
         font-family: 'Raleway';
     }
-    .blog-greed div:nth-child(1) p{
+    .articles div:nth-child(1) p{
         display: none;
     }
-    .latest button {
+    .blog-articles button {
         margin-top: 8vw;
-    }
-}
-@media (max-width: 850px){
-    .product-reviews > div > div > ul > li > div > div:last-child{
-        min-height: 0px;
     }
 }
 @media (max-width: 768px) { 
     .header-container {
         gap: 1.8vw;
-    }
-    .product-reviews > div > div > ul > li > div > div:last-child{
-        min-height: 96px;
     }
     header{
         padding: 0;
@@ -706,17 +457,6 @@ nav, footer{
     }
     #burger-menu button {
         width: 50vw;
-    }
-    .reviews div div p:not(:first-child){
-        display: none;
-    }
-    .product-reviews button{
-        margin-top: 8vw;
-    }
-    .products h3 {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 0;
     }
     .nav-container section:nth-child(2){
         display: none;
@@ -749,7 +489,7 @@ nav, footer{
     }
 }
 @media (max-width: 600px) {
-    .latest div.blog-greed > div img{
+    .blog-articles div.articles > div img{
         width: 196px;
         height: 120px;
         margin-right: 10px;
@@ -774,17 +514,15 @@ nav, footer{
         font-size: 30px;
         line-height: 38px;
     }
-    body > main > section.products > div > img {
-        display: none;
-    }
 }
 @media (max-width: 460px){
-    .latest div.blog-greed > div img {
+    .blog-articles div.articles > div img {
         width: 156px;
         height: 95px;
         margin-right: 7.5px;
     }
-    .latest div.blog-greed div h3 ,.latest div.blog-greed div p {
+    .blog-articles div.articles div h3,
+    .blog-articles div.articles div p {
         font-size: 15px;
         line-height: 22px;
     }
@@ -793,11 +531,7 @@ nav, footer{
     #burger-menu button {
         width: 75vw;
     }
-    .products h3 {
-        font-size: 15px;
-        line-height: 20px;
-    }
-    .latest div.blog-greed > div img {
+    .blog-articles div.articles > div img {
         width: 135.6px;
         height: 82.6px;
         margin-right: 2.5px;
@@ -807,21 +541,10 @@ nav, footer{
     .header-container div {
         gap: 29.52px;
     }
-    .introducing img {
-        width: 500px;
-        max-width: 500px;
-        min-width: 500px;
-        height: 386px;
-        flex-shrink: 0;
-    }
-    .introducing {
-        padding: 50px;
-        gap: 50px;
-    }
     #burger-menu {
         gap: 43.2px;
     }
-    .latest button, .latest, .products, .product-reviews, .product-reviews button, .nav-container {
+    .blog-articles button, .blog-articles, .nav-container {
         margin-top: 100px;
     }
 }
@@ -829,14 +552,10 @@ body.dark-mode{
     background-color: #000;
 }
 body.dark-mode header button, 
-body.dark-mode h2,
-body.dark-mode .latest div div h3,
-body.dark-mode .latest div div p,
-body.dark-mode .latest button,
-body.dark-mode .products,
-body.dark-mode .product-reviews button,
-body.dark-mode .reviews div div h3,
-body.dark-mode .reviews div div p:not(:first-child),
+body.dark-mode h1,
+body.dark-mode .blog-articles div div h3,
+body.dark-mode .blog-articles div div p,
+body.dark-mode .blog-articles button,
 body.dark-mode nav h3,
 body.dark-mode nav p,
 body.dark-mode nav a,
@@ -850,10 +569,7 @@ body.dark-mode footer a
 body.dark-mode #theme-button p{
     filter: invert(100%);
 }
-body.dark-mode .product-reviews div div div{
-    background-color: #080605;
-}
-body.dark-mode .latest{
+body.dark-mode .blog-articles{
     background-color: #1c140e;
 }
 body.dark-mode nav, body.dark-mode footer{
@@ -861,4 +577,7 @@ body.dark-mode nav, body.dark-mode footer{
 }
 body.dark-mode #burger-menu {
     background-color: #000;
+}
+body.dark-mode .articles div{
+    border: 2px solid white;
 }
