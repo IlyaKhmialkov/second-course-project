@@ -32,6 +32,8 @@ const passwordUpLabel = document.getElementById('password-up-label');
 const confirmPasswordLabel = document.getElementById('confirm-password-label');
 const termsOfUseLabel = document.getElementById('terms-of-use-label');
 
+const changeLanguage = document.getElementById('change-language');
+
 signUpButton.addEventListener('click', function(){
     signIn.classList.add('hidden');
     signUp.classList.remove('hidden');
@@ -358,6 +360,21 @@ async function main(){
     darkThemeSetup();
     setAdminInLocalStorage();
     changeLanguageSetup();
+
+    changeLanguage.addEventListener('click', async function(){
+        const termsLink = document.createElement('a');
+        termsLink.href = '#';
+        termsLink.setAttribute('data-i18', 71)
+        if(document.body.classList.contains('ja')){
+            termsLink.textContent = '利用規約';
+        } else {
+            termsLink.textContent = ' terms of use';
+        }
+
+        termsOfUseLabel.appendChild(termsLink);
+    });
+    changeLanguage.click();
+    changeLanguage.click();
 }
 
 main();

@@ -165,9 +165,16 @@ form div input{
 #generate-login-button{
     margin-left: 10px;
 }
-span{
+.required::before{
+    content: " *";
     color: orange;
-    font-size: 20px;
+    font-size: 30px;
+    position: absolute;
+    top: -5px;
+    left: 145px;
+}
+.required:nth-child(10)::before{
+    left: 255px;
 }
 #sign-up-send.hidden, #sign-in-send.hidden{
     display: block;
@@ -323,8 +330,9 @@ form div{
         flex-direction: row;
         margin-top: 10px;
     }
-    #generate-login-button{
+    #generate-login-button, #generate-password-button{
         margin-left: 0;
+        height: 50px;
     }
     #visible-password-button{
         margin: 0 auto;
@@ -365,6 +373,14 @@ form div{
     .msg-speshal-symbol-password::after
     {
         top: 114px
+    }
+    .required::before{
+        top: 20px;
+        left: -11px;        
+    }
+    .sign-up .required:nth-child(10)::before{
+        left: 255px;
+        top: -2.5px;
     }
 }
 @media (max-width: 628px){
@@ -435,9 +451,28 @@ form div{
         top:74px;
     }
 }
-@media (max-width: 380px){
+@media (max-width: 445px){
+    .sign-up .required:nth-child(10)::before{
+        top: 15px;
+        left: 29px;
+    }
+}
+@media (max-width: 404px){
+    .sign-up .required:nth-child(10)::before{
+        left: 47px;
+    }
+}
+@media (max-width: 381px){
     #login-up-label.msg-empty::after,
     .msg-login-exist::after{
         top: 139px;
     }
-}
+    .sign-up .required:nth-child(10)::before{
+        left: 95px;
+    }
+}    
+@media (max-width: 323px){
+    .sign-up .required:nth-child(10)::before{
+        left: 130px;
+    }
+}    
