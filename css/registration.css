@@ -10,6 +10,10 @@
     font-family: 'Bitter';
     src: url('../assets/fonts/Bitter-Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'NotoSerifTC';
+    src: url('../assets/fonts/NotoSerifTC-Regular.otf') format('truetype');
+}
 html, body{
     margin: 0;
     scroll-behavior: smooth;

@@ -48,15 +48,11 @@ signInButton.addEventListener('click', function(){
     signIn.classList.remove('hidden');
 });
 async function getUsersData(){
-    try {
-        const data = localStorage.getItem('usersData');
-        if (!data) {
-            throw new Error('No data found in localStorage');
-        }
+    const data = localStorage.getItem('usersData');
+    if(data){
         return JSON.parse(data);
-    } catch (error) {
-        console.error('Error:', error);
     }
+    return null;    
 }
 function checkMatches(item, items){
     for(let i = 0; i < items.length; i++ ){
@@ -68,7 +64,7 @@ function checkMatches(item, items){
 }
 async function setDefaultRolesInLocalStorage(){
     let usersData = await getUsersData();
-    if(usersData != null || usersData != undefined){
+    if(usersData != null && usersData != undefined){
         return;
     }
     const admin = {
@@ -391,6 +387,8 @@ async function main(){
     });
     changeLanguage.click();
     changeLanguage.click();
+
+    console.log(getUsersData())
 }
 
 main();
