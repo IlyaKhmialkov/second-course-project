@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affiliate</title>
+  <link rel="icon" href="../assets/images/tools.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../js/libraries/Glide.js/styles.css">
+</head>
+<body>
+  <header>    
+    <div class="header-container">
+      <img src="../assets/images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">       
+      <button id="theme-button"><p id="theme-button-p">🌝</p></button>
+      <button id="change-language" data-i18="53">en</button>   
+      <button type="button" id="go-as-user" data-i18="77">Go as user</button>
+    </div>
+  </header>  
+  
+  <main>
+    <section class="latest" id="latest">
+      <h2 data-i18="11">Latest from the Blog</h2>
+      <div class="blog-greed">
+        <div>
+          <img src="../assets/images/grass.png" alt="grass and house">
+          <h3 data-i18="12">How to Prep Your Lawn in the Spring</h3>
+          <p data-i18="13">This is the blog description text. This is the blog description text. This is the blog description text.</p>
+        </div>
+        <div>
+          <img src="../assets/images/road.png" alt="road and bush">
+          <p data-i18="14">Secrets to Know About Hedge Trimming</p>     
+        </div>
+        <div>
+          <img src="../assets/images/tree.png" alt="grass and house">
+          <p data-i18="15">What to Do With a Dying Tree</p>
+        </div>
+        <div>
+          <img src="../assets/images/flowers.png" alt="grass and house">
+          <p data-i18="16">Which Flowers Should You Plant Garden</p>
+        </div>
+      </div>
+      <button type="button" id="blog-articles">
+        <img src="../assets/images/play.svg" alt="triangle points right">
+        <p data-i18="78">Add new Blog Article</p>
+      </button>
+    </section>    
+    <section class="product-reviews" id="product-reviews">
+      <h2 data-i18="20">Latest Product Reviews</h2>
+
+      <div class="reviews glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <div class="review">
+                <div class="shadow-box">
+                  <p data-i18="21">Lawns</p>
+                </div>
+                <img src="../assets/images/lawnmower.png" alt="lawnmower">
+                <div>
+                  <h3 data-i18="22">Lawnmower Xtreme</h3>
+                  <p data-i18="23">This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
+                </div>         
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="review">
+                <div class="shadow-box">
+                  <p data-i18="24">Garden</p>
+                </div>
+                <img src="../assets/images/grow-fertilizer.png" alt="lawnmower">
+                <div>
+                  <h3 data-i18="25">Ultra Grow Fertilizer</h3>
+                  <p data-i18="26">This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="review">
+                <div class="shadow-box">
+                  <p data-i18="27">Hedges</p>
+                </div>
+                <img src="../assets/images/hedge-clippers.png" alt="lawnmower">
+                <div>
+                  <h3 data-i18="28">Hedge Clippers</h3>
+                  <p data-i18="29">This is the Review Snippet. This is the Review Snippet. This is the Review Snippet. This is the Review Snippet.</p>
+                </div>
+              </div>
+            </div>
+            </li>
+          </ul>
+        </div>
+
+      <button type="button">
+        <img src="../assets/images/play.svg" alt="triangle points right">
+        <p data-i18="79">Add new Product Review</p>
+      </button>
+    </section>       
+    <section class="users-list-section">
+      <h2 data-i18="80">Go to see site users</h2>
+      <button id="users-button" data-i18="81">* Click *</button>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <hr>
+      <div>
+        <div>
+          <p><a href="#" data-i18="49">Style Guide</a></p>
+          <p><a href="#" data-i18="50">Licenses</a></p>
+          <p><a href="#" data-i18="51">Changelog</a></p>
+        </div>
+        <div>
+          <p><a href="mailto:email@gmail.com">email@gmail.com</a></p>
+          <p><a href="tel:+375211010454">+375211010454</a></p>
+          <p><a target="_blank" href="https://maps.app.goo.gl/VSWhctaQ6nWjNebi7" data-i18="52">location</a></p>
+          <p><a target="_blank" href="https://github.com/IlyaKhmialkov">GitHub</a></p>
+          <p><a href="#" data-i18="54" id="clear-local-storage">Clear LocalStorage</a></p>
+        </div> 
+      </div>   
+    </div>    
+  </footer>
+  <script src="../js/libraries/Glide.js/glide.js"></script>
+  <script src="../js/admin.js" type="module"></script>
+</body>
+</html>
