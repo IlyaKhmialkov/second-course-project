@@ -1,5 +1,6 @@
 import { darkThemeSetup } from '/js/components/dark-theme.js';
 import { changeLanguageSetup } from '/js/components/changeLanguage.js'
+import { modalWindowShow } from '/js/components/modal.js';
 
 const sendUpFormButton = document.getElementById('sign-up-send');
 const signUpButton = document.getElementById('sign-up-button');
@@ -140,7 +141,7 @@ signInForm.addEventListener('submit', async function(event) {
         }
         signInForm.reset();
     } else {
-        alert('Invalid login or password');
+        modalWindowShow('Invalid login or password');
     }
 });
 signUpForm.addEventListener('submit', async function(event) {
@@ -215,7 +216,7 @@ generateLoginButton.addEventListener('click', function(){
         ammountOfGeneratedLigins++;
         checkValidUpForm();
     } else {
-        alert('Error: you generate too much logins, try by yourself');
+        modalWindowShow('Error: you generate too much logins, try by yourself');
     }
 });
 function setSubmitActive(){

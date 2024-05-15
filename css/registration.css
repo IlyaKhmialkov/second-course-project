@@ -200,7 +200,8 @@ form div input{
 }
 body.dark-mode, 
 body.dark-mode #theme-button,
-body.dark-mode img
+body.dark-mode img,
+body.dark-mode #modal-window
 {
     filter: invert(100%);
 }

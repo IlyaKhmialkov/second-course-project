@@ -1,11 +1,11 @@
 const blogArticlesButton = document.getElementById('blog-articles');
 blogArticlesButton.addEventListener('click', function() {
-    alert('you must sign up first');
+    modalWindowShow('you must sign up first');
 });
 
 const productsButton = document.getElementById('products-button');
 productsButton.addEventListener('click', function() {
-    alert('you must sign up first');
+    modalWindowShow('you must sign up first');
 });
 
 const signUpButton = document.getElementById('sign-up');
@@ -24,6 +24,7 @@ import { burgerSetup } from '/js/components/burger-menu.js';
 import { darkThemeSetup } from '/js/components/dark-theme.js';
 import { changeLanguageSetup } from '/js/components/changeLanguage.js';
 import { dropdownSetup } from '/js/components/dropdown.js';
+import { modalWindowShow } from '/js/components/modal.js';
 
 async function main(){
     burgerSetup();
