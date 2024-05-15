@@ -70,7 +70,9 @@ header{
     justify-content: center;
     gap: 10vw;
 }
-#theme-button p{
+#theme-button{
+    margin-top: 23.5px;
+    height: 28px;
     font-size: 20px;
     box-shadow: inset 0px 0px 20px 20px #3F3F3F,  0px 0px 7.5px 7.5px #3F3F3F;
 }
@@ -197,7 +199,7 @@ form div input{
     }
 }
 body.dark-mode, 
-body.dark-mode #theme-button-p,
+body.dark-mode #theme-button,
 body.dark-mode img
 {
     filter: invert(100%);

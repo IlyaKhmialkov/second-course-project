@@ -1,5 +1,4 @@
 const themeButton = document.getElementById('theme-button');
-const themeButtonP = document.getElementById('theme-button-p');
 
 export function darkThemeSetup(){
     const data = localStorage.getItem('theme');
@@ -9,21 +8,21 @@ export function darkThemeSetup(){
         if(prefersDarkTheme.matches){
             themeButton.classList.add('dark');
             localStorage.setItem('theme', 'dark');
-            themeButtonP.textContent = '🌞';
+            themeButton.textContent = '🌞';
             document.body.classList.add('dark-mode');
         } else{
             themeButton.classList.add('light');
             localStorage.setItem('theme', 'light');
-            themeButtonP.textContent = '🌝';
+            themeButton.textContent = '🌝';
         }
     } else{
         if(data === 'dark'){
             themeButton.classList.add('dark');
-            themeButtonP.textContent = '🌞';
+            themeButton.textContent = '🌞';
             document.body.classList.add('dark-mode');
         } else{
             themeButton.classList.add('light');
-            themeButtonP.textContent = '🌝';
+            themeButton.textContent = '🌝';
         }
     }
     
@@ -31,13 +30,13 @@ export function darkThemeSetup(){
         if( themeButton.classList.contains('dark')){
             themeButton.classList.remove('dark');
             themeButton.classList.add('light');
-            themeButtonP.textContent = '🌝';
+            themeButton.textContent = '🌝';
             document.body.classList.remove('dark-mode');
             localStorage.setItem('theme', 'light');
         } else{
             themeButton.classList.remove('light');
             themeButton.classList.add('dark');
-            themeButtonP.textContent = '🌞';
+            themeButton.textContent = '🌞';
             document.body.classList.add('dark-mode');
             localStorage.setItem('theme', 'dark');
         }              

@@ -387,8 +387,6 @@ async function main(){
     });
     changeLanguage.click();
     changeLanguage.click();
-
-    console.log(getUsersData())
 }
 
 main();

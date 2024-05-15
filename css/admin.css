@@ -60,20 +60,24 @@ header{
 .header-container{
     height: 100%;
     box-sizing: border-box;   
-    padding: 1.025% 1.025% 1.025% 0;
+    padding: 5px;
 
     display: flex;
     justify-content: space-between;
 }
 .header-container p{
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 28px;
     gap: 1.8vw;
 }
 .header-container button{
+    font-size: 18px;
+    line-height: 28px;
     gap: 6px;
 }
-#theme-button p{
+#theme-button{
+    margin-top: 23.5px;
+    height: 28px;
     font-size: 20px;
     box-shadow: inset 0px 0px 20px 20px #3F3F3F,  0px 0px 7.5px 7.5px #3F3F3F;
 }
@@ -484,7 +488,7 @@ footer{
 body.dark-mode{
     background-color: #000;
 }
-body.dark-mode header button, 
+body.dark-mode header button:not(#theme-button), 
 body.dark-mode h2,
 body.dark-mode .latest div div h3,
 body.dark-mode .latest div div p,
@@ -496,9 +500,6 @@ body.dark-mode hr,
 body.dark-mode .users-list-section button,
 body.dark-mode footer a
 {
-    filter: invert(100%);
-}
-body.dark-mode #theme-button p{
     filter: invert(100%);
 }
 body.dark-mode .product-reviews div div div{

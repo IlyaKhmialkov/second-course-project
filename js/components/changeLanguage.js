@@ -9,10 +9,22 @@ function changeLanguage(language){
     const elements = document.querySelectorAll('[data-i18]');
 
     elements.forEach((element) => {
-        const key = element.getAttribute('data-i18');
-        const translatedText = translation[key];
-
-        element.textContent = translatedText;
+        if (element.children.length > 0) {
+            const key = element.getAttribute('data-i18');
+            const childImg = element.querySelector("img");
+            while (element.firstChild) {
+                element.removeChild(element.firstChild);
+            }
+            const newTranslation = document.createTextNode(translation[key]);
+            if (childImg !== null) {
+                element.appendChild(childImg);                
+            }
+            element.appendChild(newTranslation);
+                        
+        } else {
+            const key = element.getAttribute('data-i18');
+            element.textContent = translation[key];
+        }
     });
 }
 

@@ -60,7 +60,7 @@ header{
 .header-container{
     height: 100%;
     box-sizing: border-box;   
-    padding: 1.025% 1.025% 1.025% 0;
+    padding: 5px;
 
     display: flex;
     justify-content: space-between;
@@ -71,9 +71,13 @@ header{
     gap: 1.8vw;
 }
 .header-container button{
+    font-size: 14px;
+    line-height: 20px;
     gap: 6px;
 }
-#theme-button p{
+#theme-button{
+    margin-top: 23.5px;
+    height: 28px;
     font-size: 20px;
     box-shadow: inset 0px 0px 20px 20px #3F3F3F,  0px 0px 7.5px 7.5px #3F3F3F;
 }
@@ -190,10 +194,10 @@ nav, footer{
     display: flex;
     gap: 2.75vw;
 }
-.nav-container section{
+.nav-container  > div{
     width: 35%;
 }
-.nav-container section:nth-child(1) div,.nav-container section:nth-child(3) div {
+.nav-container  > div:nth-child(1) div,.nav-container  > div:nth-child(3) div {
     display: flex;
 }
 .nav-container .affiliate-logo{
@@ -220,13 +224,13 @@ nav, footer{
         transform: rotate(0deg);
     }
   }
-.nav-container section:nth-child(1) p{
+.nav-container  > div:nth-child(1) p{
     max-width: 89%;
     font-size: 16px;
     line-height: 20px;
     padding-left: 1px;
 }
-.nav-container section:nth-child(2) div{
+.nav-container  > div:nth-child(2) div{
     display: grid;
     grid-template:
     "pic-1 text-1" 100px
@@ -234,7 +238,7 @@ nav, footer{
     "pic-3 text-3" 100px/ 39% 61%;
     row-gap: 20px;   
 }
-.nav-container section:nth-of-type(2) h3{
+.nav-container  > div:nth-of-type(2) h3{
     box-sizing: border-box;
     padding: 1px 0 0 1px;
     margin-bottom: 10.5px;
@@ -251,34 +255,34 @@ nav, footer{
 .img-container{
     isolation: isolate;
 }
-.nav-container section:nth-of-type(2) p{
+.nav-container  > div:nth-of-type(2) p{
     padding: 0 0 3px 10px;
     align-self: center;
     font-size: 16px;
     line-height: 18px;
 }
-.nav-container section:nth-of-type(2) .img-container:nth-of-type(1){
+.nav-container  > div:nth-of-type(2) .img-container:nth-of-type(1){
     background-image: url(../assets/images/grass.png);
     grid-area: pic-1;
 }
-.nav-container section:nth-of-type(2) .img-container:nth-of-type(2){
+.nav-container  > div:nth-of-type(2) .img-container:nth-of-type(2){
     background-image: url(../assets/images/road.png);
     grid-area: pic-2;
 }
-.nav-container section:nth-of-type(2) .img-container:nth-of-type(3){
+.nav-container  > div:nth-of-type(2) .img-container:nth-of-type(3){
     background-image: url(../assets/images/tree.png);
     grid-area: pic-3;
 }
-.nav-container section:nth-of-type(2) p:nth-of-type(1){
+.nav-container  > div:nth-of-type(2) p:nth-of-type(1){
     grid-area: text-1;
 }
-.nav-container section:nth-of-type(2) p:nth-of-type(2){
+.nav-container  > div:nth-of-type(2) p:nth-of-type(2){
     grid-area: text-2;
 }
-.nav-container section:nth-of-type(2) p:nth-of-type(3){
+.nav-container  > div:nth-of-type(2) p:nth-of-type(3){
     grid-area: text-3;
 }
-.nav-container section:nth-child(3) div {
+.nav-container  > div:nth-child(3) div {
     box-sizing: border-box;
     border-radius: 7px;
     border: 1px solid #AABCC5;
@@ -380,11 +384,16 @@ nav, footer{
         font-size: 18px;
         line-height: 28px;
     }
-    #theme-button p {
-        box-shadow: none;
+    #theme-button{
+        margin-top: 0;
+        height: auto;
     }
     #burger-button{
         display: block;
+    }
+    .header-container #burger-menu button, .header-container #go-back{
+        font-size: 18px;
+        line-height: 28px;
     }
     #burger-menu{
         background-color: #FFFFFF;
@@ -402,7 +411,7 @@ nav, footer{
         z-index: 10;
         transition: 2s transform;
     }
-    #burger-menu button{
+    #burger-menu button, #theme-button{
         box-sizing: border-box;
         padding: 7px;
         background-color: #E3EBF1;
@@ -410,6 +419,11 @@ nav, footer{
         border-radius: 7px;
         width: 25vw;
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
+    body.dark-mode #theme-button{
+        background-color: #1c140e;
+        border-color: rgba(232, 90, 175, 0.2);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
     }
     #burger-menu.show{
         transform: translateX(100%);
@@ -456,7 +470,7 @@ nav, footer{
     #burger-menu button {
         width: 50vw;
     }
-    .nav-container section:nth-child(2){
+    .nav-container  > div:nth-child(2){
         display: none;
     }
     .nav-container {
@@ -464,7 +478,7 @@ nav, footer{
         flex-direction: column;
         padding-bottom: 0;
     }
-    .nav-container section {
+    .nav-container  > div {
         width: 100%;
     }
     #burger-button {
@@ -493,7 +507,7 @@ nav, footer{
 }
 @media (max-width: 500px) { 
     .header-container .affiliate-logo{
-        margin-left: 4vw;
+        margin-left: 2vw;
     }
     .header-container, .header-container div {
         gap: 2.9vw;
@@ -526,21 +540,18 @@ nav, footer{
 body.dark-mode{
     background-color: #000;
 }
-body.dark-mode header button, 
+body.dark-mode header button:not(#theme-button), 
 body.dark-mode .reviews div div h3,
 body.dark-mode .reviews div div p:not(:first-child),
 body.dark-mode nav h3,
 body.dark-mode nav p,
 body.dark-mode nav a,
-body.dark-mode nav > div > section:nth-child(3) > div,
-body.dark-mode nav > div > section:nth-child(1) > div,
+body.dark-mode nav > div > div:nth-child(3) > div,
+body.dark-mode nav > div > div:nth-child(1) > div,
 body.dark-mode hr,
 body.dark-mode h1,
 body.dark-mode footer a
 {
-    filter: invert(100%);
-}
-body.dark-mode #theme-button p{
     filter: invert(100%);
 }
 body.dark-mode .review{

@@ -11,7 +11,7 @@
   <header>    
     <div class="header-container registration">
       <img src="../assets/images/affiliate.svg" alt="affiliate logo" class="affiliate-logo">
-      <button id="theme-button"><p id="theme-button-p">🌝</p></button>    
+      <button id="theme-button">🌝</button>
       <button id="change-language" data-i18="53">en</button>
       <button type="button" id="go-back" data-i18="74">Go back</button>
     </div>
@@ -19,7 +19,7 @@
   <main>
     <section class="sign-in">      
       <h2 data-i18="56">Sign in</h2>    
-      <form action="">
+      <form>
         <div class="required">
           <label for="login" id="login-in-label" data-i18="57">Login</label>
           <input type="text" name="login" id="login" required>
@@ -36,7 +36,7 @@
     </section>      
     <section class="sign-up hidden">
       <h2 data-i18="60">Sign up</h2>    
-      <form action="">
+      <form>
         <div class="required">
           <label for="phone" id="phone-label" data-i18="61">Phone</label>
           <input type="number" name="phone" id="phone" required>
@@ -59,11 +59,11 @@
         </div>
         <div>
           <label for="patronymic" data-i18="66">Patronymic</label>
-          <input type="text" name="patronymic" id="patronymic" optional>
+          <input type="text" name="patronymic" id="patronymic">
         </div>        
         <div class="required">
           <label for="create-login" id="login-up-label" data-i18="57">Login</label>
-          <input type="text" name="create-login" id="create-login" optional>
+          <input type="text" name="create-login" id="create-login" required>
           <button type="button" id="generate-login-button" data-i18="67">Generate login</button>
         </div>
         <div class="required">
@@ -77,7 +77,7 @@
           <input type="password" name="confirm-password" id="confirm-password" required>
         </div>
         <div class="required">
-          <label for="terms-of-use" id="terms-of-use-label" data-i18="70">I read and agree with <a href="#" data-i18="71">terms of use</a></label>
+          <label for="terms-of-use" id="terms-of-use-label" data-i18="71">I read and agree with <a href="#" data-i18="71">terms of use</a></label>
           <input type="checkbox" name="terms-of-use" id="terms-of-use" required>
         </div>
         <div>
