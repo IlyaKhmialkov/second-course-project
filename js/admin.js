@@ -14,9 +14,9 @@ clearLocalStorage.addEventListener('click', function(event){
     localStorage.clear(); 
 })
 
-import { sliderSetup } from '/js/components/slider.js';
-import { darkThemeSetup } from '/js/components/dark-theme.js';
-import { changeLanguageSetup } from '/js/components/changeLanguage.js';
+import { sliderSetup } from './components/slider.js';
+import { darkThemeSetup } from './components/dark-theme.js';
+import { changeLanguageSetup } from './components/changeLanguage.js';
 
 async function main(){
     darkThemeSetup();

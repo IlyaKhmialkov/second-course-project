@@ -1,6 +1,6 @@
-import { darkThemeSetup } from '/js/components/dark-theme.js';
-import { changeLanguageSetup } from '/js/components/changeLanguage.js'
-import { modalWindowShow } from '/js/components/modal.js';
+import { darkThemeSetup } from './components/dark-theme.js';
+import { changeLanguageSetup } from './components/changeLanguage.js'
+import { modalWindowShow } from './components/modal.js';
 
 const sendUpFormButton = document.getElementById('sign-up-send');
 const signUpButton = document.getElementById('sign-up-button');

@@ -1,5 +1,5 @@
-import { darkThemeSetup } from '/js/components/dark-theme.js';
-import { changeLanguageSetup } from '/js/components/changeLanguage.js'
+import { darkThemeSetup } from './components/dark-theme.js';
+import { changeLanguageSetup } from './components/changeLanguage.js'
 const usersDiv = document.querySelector('.users');
 const languageButton = document.getElementById('change-language');
 

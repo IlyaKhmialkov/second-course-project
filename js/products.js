@@ -9,9 +9,9 @@ clearLocalStorage.addEventListener('click', function(event){
     localStorage.clear(); 
 })
 
-import { burgerSetup } from '/js/components/burger-menu.js';
-import { darkThemeSetup } from '/js/components/dark-theme.js';
-import { changeLanguageSetup } from '/js/components/changeLanguage.js';
+import { burgerSetup } from './components/burger-menu.js';
+import { darkThemeSetup } from './components/dark-theme.js';
+import { changeLanguageSetup } from './components/changeLanguage.js';
 
 async function main(){
     burgerSetup();

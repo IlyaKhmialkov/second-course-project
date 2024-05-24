@@ -19,11 +19,11 @@ clearLocalStorage.addEventListener('click', function(event){
     localStorage.clear(); 
 })
 
-import { sliderSetup } from '/js/components/slider.js';
-import { burgerSetup } from '/js/components/burger-menu.js';
-import { darkThemeSetup } from '/js/components/dark-theme.js';
-import { changeLanguageSetup } from '/js/components/changeLanguage.js';
-import { dropdownSetup } from '/js/components/dropdown.js';
+import { sliderSetup } from './components/slider.js';
+import { burgerSetup } from './components/burger-menu.js';
+import { darkThemeSetup } from './components/dark-theme.js';
+import { changeLanguageSetup } from './components/changeLanguage.js';
+import { dropdownSetup } from './components/dropdown.js';
 
 async function main(){
     burgerSetup();
