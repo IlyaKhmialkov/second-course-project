@@ -60,7 +60,7 @@ header{
 .header-container{
     height: 100%;
     box-sizing: border-box;   
-    padding: 1.025% 1.025% 1.025% 0;
+    padding: 5px;
 
     display: flex;
     justify-content: space-between;
